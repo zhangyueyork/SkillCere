@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """SkillCere command line utility.
 
-First version: scan installed skills and show index status.
+First version: scan installed skills, show index status, and recommend skills.
 """
 
 from __future__ import annotations
@@ -9,9 +9,12 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
 import re
 import sys
-from datetime import datetime, timezone
+import urllib.error
+import urllib.request
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -182,6 +185,8 @@ def read_skill(skill_dir: Path) -> dict[str, Any]:
     name = metadata.get("name") or skill_dir.name
     skill_id = normalize_id(name)
     description = metadata.get("description") or first_paragraph(body)
+    if description in {"|", ">"}:
+        description = first_paragraph(body)
     display_name = first_heading(body) or name
     file_hash = sha256_file(skill_file)
     keywords = text_keywords(" ".join([name, description, body[:2000]]))
@@ -375,6 +380,134 @@ def command_status(_: argparse.Namespace) -> int:
     return 0
 
 
+def display_description(skill: dict[str, Any]) -> str:
+    description = str(skill.get("description") or "").strip()
+    if description in {"", "|", ">"}:
+        return "暂无描述"
+    return description
+
+
+def compact_text(value: str, limit: int = 240) -> str:
+    value = re.sub(r"\s+", " ", value).strip()
+    if len(value) <= limit:
+        return value
+    return value[: limit - 3].rstrip() + "..."
+
+
+def compact_skill_catalog(index: dict[str, Any], max_skills: int) -> list[dict[str, Any]]:
+    catalog: list[dict[str, Any]] = []
+    for skill_id, skill in sorted(index.get("skills", {}).items()):
+        installed_on = sorted((skill.get("installed_on") or {}).keys())
+        catalog.append(
+            {
+                "id": skill_id,
+                "name": skill.get("name", skill_id),
+                "description": compact_text(display_description(skill), 260),
+                "keywords": skill.get("keywords", [])[:12],
+                "categories": skill.get("categories", [])[:8],
+                "installed_on": installed_on,
+                "version": skill.get("latest_version", "unknown"),
+                "source_url_available": bool((skill.get("source") or {}).get("url")),
+            }
+        )
+        if len(catalog) >= max_skills:
+            break
+    return catalog
+
+
+def build_recommendation_prompt(task: str, index: dict[str, Any], max_skills: int) -> str:
+    catalog = compact_skill_catalog(index, max_skills)
+    return (
+        "你是 SkillCere（技能小脑）的推荐引擎。你的任务不是执行用户需求，而是根据 skill 目录推荐最适合辅助执行的 skill。\n\n"
+        "重要原则：\n"
+        "1. 主要推荐 skill，不要把平台选择作为主任务。\n"
+        "2. 平台信息只用于说明 skill 已安装在哪里，或是否需要安装。\n"
+        "3. 不要保存、复述或扩展用户隐私信息。\n"
+        "4. 只从给定 skill 目录中推荐；如果没有合适 skill，要明确说没有。\n"
+        "5. 推荐数量以 1-5 个为宜，宁缺毋滥。\n"
+        "6. 对 source_url_available=false 或 version=unknown 的 skill，要说明目前无法确认远程最新版本，只能按本地 hash/状态追踪。\n\n"
+        "请按以下格式输出：\n"
+        "【推荐使用的 Skill】\n"
+        "- skill-id：推荐理由；适用环节；安装平台提示\n\n"
+        "【版本检查结果】\n"
+        "- skill-id：版本状态，是否需要人工确认\n\n"
+        "【安装/更新建议】\n"
+        "- 说明当前平台是否可能需要安装这些 skill；不要给出不存在的下载地址\n\n"
+        "【给执行 Agent 的启动说明】\n"
+        "一段可以直接复制给执行 Agent 的说明，包含“使用哪些 skill 完成什么需求、执行顺序、缺失 skill 时如何处理”。\n\n"
+        f"用户需求：\n{task}\n\n"
+        "Skill 目录 JSON：\n"
+        f"{json.dumps(catalog, ensure_ascii=False, indent=2)}\n"
+    )
+
+
+def extract_response_text(payload: dict[str, Any]) -> str:
+    if isinstance(payload.get("output_text"), str):
+        return payload["output_text"]
+
+    parts: list[str] = []
+    for item in payload.get("output", []) or []:
+        for content in item.get("content", []) or []:
+            if isinstance(content.get("text"), str):
+                parts.append(content["text"])
+    return "\n".join(parts).strip()
+
+
+def call_openai_recommendation(prompt: str, model: str) -> str:
+    api_key = os.environ.get("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY is not set")
+
+    request = urllib.request.Request(
+        "https://api.openai.com/v1/responses",
+        data=json.dumps({"model": model, "input": prompt}).encode("utf-8"),
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=120) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as error:
+        detail = error.read().decode("utf-8", errors="replace")
+        raise RuntimeError(f"OpenAI request failed: HTTP {error.code} {detail}") from error
+
+    text = extract_response_text(payload)
+    if not text:
+        raise RuntimeError("OpenAI response did not contain output text")
+    return text
+
+
+def command_recommend(args: argparse.Namespace) -> int:
+    query = " ".join(args.task).strip()
+    if not query:
+        print("Please provide a task description.", file=sys.stderr)
+        return 2
+
+    index = ensure_index_shape(read_json(INDEX_FILE))
+    prompt = build_recommendation_prompt(query, index, args.max_skills)
+
+    if args.prompt_only or not os.environ.get("OPENAI_API_KEY"):
+        if not args.prompt_only:
+            print("OPENAI_API_KEY 未配置，以下是可复制给大模型的 SkillCere 推荐请求：")
+            print()
+        print(prompt)
+        return 0
+
+    try:
+        print(call_openai_recommendation(prompt, args.model))
+    except RuntimeError as error:
+        print(f"LLM 推荐失败：{error}", file=sys.stderr)
+        print()
+        print("以下是可复制给大模型的 SkillCere 推荐请求：")
+        print()
+        print(prompt)
+        return 1
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="skillcere",
@@ -387,6 +520,13 @@ def build_parser() -> argparse.ArgumentParser:
 
     status = subcommands.add_parser("status", help="Show central index status.")
     status.set_defaults(func=command_status)
+
+    recommend = subcommands.add_parser("recommend", help="Recommend skills for a task.")
+    recommend.add_argument("task", nargs="+", help="Task description.")
+    recommend.add_argument("--model", default=os.environ.get("SKILLCERE_MODEL", "gpt-5.4-mini"), help="LLM model name.")
+    recommend.add_argument("--max-skills", type=int, default=300, help="Maximum number of indexed skills to send to the LLM.")
+    recommend.add_argument("--prompt-only", action="store_true", help="Print the LLM prompt without calling an API.")
+    recommend.set_defaults(func=command_recommend)
 
     return parser
 

@@ -55,12 +55,12 @@ SkillCere/
 ```powershell
 python .\skillcere.py scan
 python .\skillcere.py status
+python .\skillcere.py recommend "用户需求"
 ```
 
 后续再扩展：
 
 ```powershell
-skillcere recommend "用户需求"
 skillcere check-updates
 skillcere sync
 ```
@@ -77,6 +77,26 @@ python .\skillcere.py scan
 
 ```powershell
 python .\skillcere.py status
+```
+
+生成 skill 推荐：
+
+```powershell
+python .\skillcere.py recommend "帮我做一个高质量前端页面，并用浏览器截图验证效果"
+```
+
+`recommend` 使用大模型完成判断，不使用本地关键词打分作为最终推荐。默认读取 `OPENAI_API_KEY` 调用 OpenAI Responses API；如果没有配置 API key，会输出一段可复制给任意大模型的 SkillCere 推荐请求。
+
+只生成推荐请求、不调用 API：
+
+```powershell
+python .\skillcere.py recommend "用户需求" --prompt-only
+```
+
+可选模型：
+
+```powershell
+python .\skillcere.py recommend "用户需求" --model gpt-5.4-mini
 ```
 
 ## 推荐流程
