@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """SkillCere command line utility.
 
-First version: scan installed skills, show index status, and recommend skills.
+First version: scan installed skills, show index status, and provide
+recommendation context for an Agent.
 """
 
 from __future__ import annotations
@@ -9,11 +10,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-import os
 import re
 import sys
-import urllib.error
-import urllib.request
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -415,11 +413,12 @@ def compact_skill_catalog(index: dict[str, Any], max_skills: int) -> list[dict[s
     return catalog
 
 
-def build_recommendation_prompt(task: str, index: dict[str, Any], max_skills: int) -> str:
+def build_agent_context(task: str, index: dict[str, Any], max_skills: int) -> str:
     catalog = compact_skill_catalog(index, max_skills)
     return (
-        "你是 SkillCere（技能小脑）的推荐引擎。你的任务不是执行用户需求，而是根据 skill 目录推荐最适合辅助执行的 skill。\n\n"
-        "重要原则：\n"
+        "【SkillCere 推荐上下文】\n\n"
+        "你是当前 Agent。SkillCere Core 只负责提供 skill 清单上下文，最终 skill 推荐应由你基于任务需求完成。\n\n"
+        "请遵守：\n"
         "1. 主要推荐 skill，不要把平台选择作为主任务。\n"
         "2. 平台信息只用于说明 skill 已安装在哪里，或是否需要安装。\n"
         "3. 不要保存、复述或扩展用户隐私信息。\n"
@@ -441,71 +440,21 @@ def build_recommendation_prompt(task: str, index: dict[str, Any], max_skills: in
     )
 
 
-def extract_response_text(payload: dict[str, Any]) -> str:
-    if isinstance(payload.get("output_text"), str):
-        return payload["output_text"]
-
-    parts: list[str] = []
-    for item in payload.get("output", []) or []:
-        for content in item.get("content", []) or []:
-            if isinstance(content.get("text"), str):
-                parts.append(content["text"])
-    return "\n".join(parts).strip()
-
-
-def call_openai_recommendation(prompt: str, model: str) -> str:
-    api_key = os.environ.get("OPENAI_API_KEY")
-    if not api_key:
-        raise RuntimeError("OPENAI_API_KEY is not set")
-
-    request = urllib.request.Request(
-        "https://api.openai.com/v1/responses",
-        data=json.dumps({"model": model, "input": prompt}).encode("utf-8"),
-        headers={
-            "Authorization": f"Bearer {api_key}",
-            "Content-Type": "application/json",
-        },
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=120) as response:
-            payload = json.loads(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as error:
-        detail = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"OpenAI request failed: HTTP {error.code} {detail}") from error
-
-    text = extract_response_text(payload)
-    if not text:
-        raise RuntimeError("OpenAI response did not contain output text")
-    return text
-
-
-def command_recommend(args: argparse.Namespace) -> int:
+def command_context(args: argparse.Namespace) -> int:
     query = " ".join(args.task).strip()
     if not query:
         print("Please provide a task description.", file=sys.stderr)
         return 2
 
     index = ensure_index_shape(read_json(INDEX_FILE))
-    prompt = build_recommendation_prompt(query, index, args.max_skills)
-
-    if args.prompt_only or not os.environ.get("OPENAI_API_KEY"):
-        if not args.prompt_only:
-            print("OPENAI_API_KEY 未配置，以下是可复制给大模型的 SkillCere 推荐请求：")
-            print()
-        print(prompt)
-        return 0
-
-    try:
-        print(call_openai_recommendation(prompt, args.model))
-    except RuntimeError as error:
-        print(f"LLM 推荐失败：{error}", file=sys.stderr)
-        print()
-        print("以下是可复制给大模型的 SkillCere 推荐请求：")
-        print()
-        print(prompt)
-        return 1
+    print(build_agent_context(query, index, args.max_skills))
     return 0
+
+
+def command_recommend(args: argparse.Namespace) -> int:
+    print("Note: `recommend` is an alias of `context`; final recommendation should be done by the Agent.")
+    print()
+    return command_context(args)
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -521,11 +470,14 @@ def build_parser() -> argparse.ArgumentParser:
     status = subcommands.add_parser("status", help="Show central index status.")
     status.set_defaults(func=command_status)
 
-    recommend = subcommands.add_parser("recommend", help="Recommend skills for a task.")
+    context = subcommands.add_parser("context", help="Generate skill recommendation context for an Agent.")
+    context.add_argument("task", nargs="+", help="Task description.")
+    context.add_argument("--max-skills", type=int, default=300, help="Maximum number of indexed skills to include.")
+    context.set_defaults(func=command_context)
+
+    recommend = subcommands.add_parser("recommend", help="Alias of context.")
     recommend.add_argument("task", nargs="+", help="Task description.")
-    recommend.add_argument("--model", default=os.environ.get("SKILLCERE_MODEL", "gpt-5.4-mini"), help="LLM model name.")
-    recommend.add_argument("--max-skills", type=int, default=300, help="Maximum number of indexed skills to send to the LLM.")
-    recommend.add_argument("--prompt-only", action="store_true", help="Print the LLM prompt without calling an API.")
+    recommend.add_argument("--max-skills", type=int, default=300, help="Maximum number of indexed skills to include.")
     recommend.set_defaults(func=command_recommend)
 
     return parser

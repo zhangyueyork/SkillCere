@@ -11,12 +11,12 @@ Use this skill at the beginning of a new task when the task may benefit from ski
 
 SkillCere Bridge connects the current Agent to SkillCere, the user's cross-Agent skill coordination system.
 
-SkillCere should decide:
+SkillCere Core should provide context for the current Agent to decide:
 
-- Which skills should be used.
-- Where the recommended skills are already installed.
-- Whether those skills need updates.
-- What startup instructions should be given to the executing Agent.
+- Which skills exist in the central index.
+- Where relevant skills are already installed.
+- Whether those skills have known versions or source URLs.
+- What constraints the Agent should observe when recommending skills.
 
 ## Workflow
 
@@ -24,17 +24,18 @@ SkillCere should decide:
 2. Call the local SkillCere command when available:
 
 ```powershell
-skillcere recommend "<user task>"
+skillcere context "<user task>"
 ```
 
-3. Read the returned recommendation.
-4. If recommended skills are not available in the current platform, tell the user where they are installed or whether they need installation.
-5. Continue using the returned startup instructions when the current platform has the needed skills or can install them.
-6. If `skillcere` is not installed yet, explain that SkillCere Core is not available and proceed with the best local skill choice.
+3. Read the returned SkillCere context.
+4. As the current Agent, use your own reasoning to recommend the most relevant skills from that context.
+5. If recommended skills are not available in the current platform, tell the user where they are installed or whether they need installation.
+6. Generate startup instructions for the executing Agent.
+7. If `skillcere` is not installed yet, explain that SkillCere Core is not available and proceed with the best local skill choice.
 
-## Expected Output From SkillCere
+## Expected Output From This Bridge
 
-SkillCere recommendations should include:
+After reading SkillCere context, this bridge should produce:
 
 - Recommendation rationale.
 - Recommended skills.
@@ -48,3 +49,4 @@ SkillCere recommendations should include:
 - Do not install or update skills unless the user explicitly asks or the current Agent has a safe install workflow.
 - Do not treat cache, temp, vendor, or `node_modules` directories as official skill sources.
 - Treat platform hints as secondary. The primary output is the recommended skill set.
+- Do not ask SkillCere Core to call an external model API. The current Agent performs the recommendation.
