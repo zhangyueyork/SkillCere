@@ -4,64 +4,29 @@
   "platforms": {
     "trae-codex": {
       "display_name": "Trae + Codex",
-      "description": "适合代码仓库修改、工程实现、测试验证和前端开发。",
-      "strengths": [
-        "coding",
-        "repo-editing",
-        "frontend",
-        "testing",
-        "agentic-coding"
-      ]
+      "description": "Trae 平台中的 Codex 能力。平台信息仅作为 skill 推荐的辅助上下文。"
     },
     "trae": {
       "display_name": "Trae",
-      "description": "适合 Trae 原生 agent 和 IDE 内任务。",
-      "strengths": [
-        "ide-workflow",
-        "coding",
-        "workspace"
-      ]
+      "description": "Trae 原生 agent 能力。平台信息仅作为 skill 推荐的辅助上下文。"
     },
     "gemini-antigravity": {
       "display_name": "Gemini @ Antigravity",
-      "description": "适合多模态、工作区规划、图片理解和 Antigravity 生态任务。",
-      "strengths": [
-        "multimodal",
-        "workspace",
-        "planning",
-        "google-ecosystem"
-      ]
+      "description": "Antigravity 平台中的 Gemini 能力。平台信息仅作为 skill 推荐的辅助上下文。",
+      "host_platform": "antigravity"
     },
     "claude-code-antigravity": {
       "display_name": "Claude Code @ Antigravity",
-      "description": "Antigravity 平台中的 Claude Code 能力，适合长文档、深度分析、写作和复杂结构化推理。",
-      "host_platform": "antigravity",
-      "strengths": [
-        "writing",
-        "analysis",
-        "long-context",
-        "structured-reasoning"
-      ]
+      "description": "Antigravity 平台中的 Claude Code 能力。平台信息仅作为 skill 推荐的辅助上下文。",
+      "host_platform": "antigravity"
     },
     "comate": {
       "display_name": "Comate",
-      "description": "适合 Comate 专属 IDE 编程能力和国内开发工作流。",
-      "strengths": [
-        "ide-coding",
-        "comate-specific",
-        "frontend",
-        "automation"
-      ]
+      "description": "Comate agent 能力。平台信息仅作为 skill 推荐的辅助上下文。"
     },
     "openclaw": {
       "display_name": "OpenClaw",
-      "description": "适合多 Agent、自动化、实验型工作流和开放式能力编排。",
-      "strengths": [
-        "multi-agent",
-        "automation",
-        "experiments",
-        "workflow"
-      ]
+      "description": "OpenClaw agent 能力。平台信息仅作为 skill 推荐的辅助上下文。"
     }
   },
   "directory_roles": {
