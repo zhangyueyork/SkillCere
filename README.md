@@ -53,12 +53,30 @@ SkillCere/
 ## 计划命令
 
 ```powershell
-skillcere init
-skillcere scan
+python .\skillcere.py scan
+python .\skillcere.py status
+```
+
+后续再扩展：
+
+```powershell
 skillcere recommend "用户需求"
 skillcere check-updates
 skillcere sync
-skillcere status
+```
+
+## 当前可用命令
+
+扫描本机已安装 skill：
+
+```powershell
+python .\skillcere.py scan
+```
+
+查看中央索引状态：
+
+```powershell
+python .\skillcere.py status
 ```
 
 ## 推荐流程
