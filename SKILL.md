@@ -1,20 +1,21 @@
 ---
 name: skillcere
-description: "SkillCere control skill. Use by default at the start of a new task to refresh and sync the skill index, gather available skills, and prepare recommendation context. It can also be used explicitly for skill management actions such as scan, sync, status, export, and prune."
+description: "SkillCere control skill for skill recommendation and skill inventory management. Use only when the user explicitly asks to use SkillCere, asks which skills can help with a task, asks for skill recommendations before work, or requests skill management actions such as scan, sync, status, export, or prune. Do not use automatically for ordinary user tasks that do not ask for skill recommendation or SkillCere."
 ---
 
 # SkillCere
 
 Use this skill as the unified entrypoint for SkillCere.
 
-Default role:
+Recommendation role:
 
-- At the beginning of a new user task, call SkillCere automatically.
+- When the user asks for skill recommendation or explicitly invokes SkillCere, call SkillCere.
 - Refresh and sync the local skill index when needed.
 - Gather the currently available skills and their install status.
 - Check whether version status is known or unknown.
 - Produce a structured context so the current Agent can decide which skills to use.
-- Generate a startup instruction for the executing Agent.
+- Generate a startup instruction for a future executing Agent.
+- Stop after recommendation unless the user explicitly asks to continue with execution.
 
 Manual role:
 
@@ -36,9 +37,9 @@ That means:
 - SkillCere Core only returns registry facts and recommendation context.
 - The current Agent reads that context and decides which skills to recommend.
 
-## Default Task-Start Workflow
+## Recommendation Workflow
 
-When the user starts a new task, do this first unless the task is trivial and clearly does not benefit from any skill:
+Use this workflow only when the user asks to use SkillCere, asks what skills can help, or asks for skill recommendations before starting work.
 
 First resolve `<skillcere-root>` as the directory that contains this `SKILL.md`.
 
@@ -70,6 +71,7 @@ python "<skillcere-root>\scripts\skillcere.py" context "<user task>"
    - version status,
    - install/update suggestion,
    - startup instruction for the executing Agent.
+7. Stop after presenting the recommendation. Do not execute the user's underlying task unless the user explicitly says to continue or start.
 
 ## Manual Management Actions
 
@@ -157,6 +159,8 @@ If a required skill is not installed in the current platform, install it first o
 
 ## Constraints
 
+- Do not use SkillCere automatically for ordinary tasks that do not ask for skill recommendation.
+- Do not execute the underlying user task after recommending skills unless the user explicitly asks to continue.
 - Do not save user task text into SkillCere.
 - Do not modify tool skill directories unless the user explicitly asks.
 - Do not treat cache, temp, vendor, or `node_modules` directories as official skill sources.
