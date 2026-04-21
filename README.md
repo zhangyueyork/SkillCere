@@ -1,6 +1,6 @@
 # SkillCere
 
-SkillCere（技能小脑）是一个跨 Agent 的 skill 清单管理与推荐上下文系统，用于持续发现、登记和更新各平台 skill，并在任务开始前向当前 Agent 提供结构化 skill 上下文。
+SkillCere（技能小脑）是一个跨 Agent 的 skill 清单管理与推荐上下文系统，用于持续发现、登记和更新各平台 skill，并在用户明确要求时向当前 Agent 提供结构化 skill 推荐上下文。
 
 核心隐喻：
 
@@ -19,9 +19,9 @@ SkillCere 是小脑，负责整理 skill 清单、版本和安装状态，让 Ag
 扫描现有 skill
 建立中央索引
 发现新安装 skill 并登记
-提供推荐所需的 skill 上下文
+按需提供推荐所需的 skill 上下文
 由当前 Agent 基于上下文推荐 skill
-由当前 Agent 生成启动说明
+由当前 Agent 生成启动说明，但默认不直接执行任务
 默认使用 Git 同步中央索引
 ```
 
@@ -171,12 +171,13 @@ version-cache.json
 它有两种使用方式：
 
 ```text
-默认自动介入：
-用户提出新任务
+显式推荐介入：
+用户要求 SkillCere 或询问哪些 skill 可以辅助任务
 → skillcere 先 scan，并默认 sync 中央清单
 → skillcere 再生成 context
 → 当前 Agent 基于 context 推荐 skill
 → 当前 Agent 生成启动说明
+→ 默认停止，不直接执行任务
 
 手动总控：
 用户显式要求 skillcere 扫描、查看状态、导出 Excel、清理失联 skill
@@ -190,7 +191,7 @@ version-cache.json
 ## 推荐流程
 
 ```text
-用户提出任务
+用户明确要求 skill 推荐
   ↓
 调用 skillcere context
   ↓
@@ -199,6 +200,8 @@ SkillCere 读取中央索引和本机安装状态
 输出 skill 清单上下文
   ↓
 当前 Agent 基于上下文推荐 skill 并生成启动说明
+  ↓
+默认停止，等待用户确认是否继续执行
 ```
 
 SkillCere 的任务上下文只做即时输出，不保存用户需求或任务原文。
