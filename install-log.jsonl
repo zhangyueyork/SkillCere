@@ -240,3 +240,539 @@
 {"created_at": "2026-04-20T17:20:38+08:00", "event": "updated", "skill_id": "feishu-bitable", "platform": "openclaw", "version": "unknown", "ref": "sha256:fba70d185ce1c27c2181295a4743bbc20844d7a8c7b9193134e260396074ea07"}
 {"created_at": "2026-04-20T17:20:38+08:00", "event": "updated", "skill_id": "feishu-bitable", "platform": "openclaw", "version": "unknown", "ref": "sha256:6c1ea0f247847714796f675de31548ada66bd1d30e41ce11d4e31088d6854a3f"}
 {"created_at": "2026-04-20T17:21:11+08:00", "event": "updated", "skill_id": "feishu-bitable", "platform": "openclaw", "version": "unknown", "ref": "sha256-multi:23fde591d0c561461b212abe85115db3ffb52fb97a3ffb57f420d2ac252eba05"}
+{"created_at": "2026-04-20T19:26:07+08:00", "event": "not_seen", "skill_id": "adaptyv", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:07+08:00", "event": "not_installed", "skill_id": "adaptyv"}
+{"created_at": "2026-04-20T19:26:07+08:00", "event": "not_seen", "skill_id": "aeon", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:07+08:00", "event": "not_installed", "skill_id": "aeon"}
+{"created_at": "2026-04-20T19:26:07+08:00", "event": "not_seen", "skill_id": "alpha-vantage", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:07+08:00", "event": "not_installed", "skill_id": "alpha-vantage"}
+{"created_at": "2026-04-20T19:26:07+08:00", "event": "not_seen", "skill_id": "alphafold-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:07+08:00", "event": "not_installed", "skill_id": "alphafold-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "anndata", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "anndata"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "arboreto", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "arboreto"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "arxiv-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "arxiv-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "astropy", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "astropy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "benchling-integration", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "benchling-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "bgpt-paper-search", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "bgpt-paper-search"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "bindingdb-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "bindingdb-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "biopython", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "biopython"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "biorxiv-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "biorxiv-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "bioservices", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "bioservices"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "brenda-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "brenda-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "cbioportal-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "cbioportal-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "cellxgene-census", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "cellxgene-census"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "chembl-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "chembl-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "cirq", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "cirq"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "citation-management", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "citation-management"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "clinical-decision-support", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "clinical-decision-support"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "clinical-reports", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "clinical-reports"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "clinicaltrials-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "clinicaltrials-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "clinpgx-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "clinpgx-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "clinvar-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "clinvar-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "cobrapy", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "cobrapy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "consciousness-council", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "consciousness-council"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "cosmic-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "cosmic-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "dask", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "dask"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "datacommons-client", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "datacommons-client"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "datamol", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "datamol"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "deepchem", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "deepchem"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "deeptools", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "deeptools"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "denario", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "denario"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "depmap", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "depmap"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "dhdna-profiler", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "dhdna-profiler"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "diffdock", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "diffdock"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "dnanexus-integration", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "dnanexus-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "docx", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "docx"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "drugbank-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "drugbank-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "edgartools", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "edgartools"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "ena-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "ena-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "ensembl-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "ensembl-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "esm", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "esm"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "etetoolkit", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "etetoolkit"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "exploratory-data-analysis", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "exploratory-data-analysis"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "fda-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "fda-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "flowio", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "flowio"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "fluidsim", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "fluidsim"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "fred-economic-data", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "fred-economic-data"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "gene-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "gene-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "generate-image", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "generate-image"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "geniml", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "geniml"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "geo-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "geo-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "geomaster", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "geomaster"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "geopandas", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "geopandas"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "get-available-resources", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "get-available-resources"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "gget", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "gget"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "ginkgo-cloud-lab", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "ginkgo-cloud-lab"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "glycoengineering", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "glycoengineering"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "gnomad-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "gnomad-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "gtars", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "gtars"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "gtex-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "gtex-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "gwas-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "gwas-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "hedgefundmonitor", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "hedgefundmonitor"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "histolab", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "histolab"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "hmdb-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "hmdb-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "hypogenic", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "hypogenic"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "hypothesis-generation", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "hypothesis-generation"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "imaging-data-commons", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "imaging-data-commons"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "infographics", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "infographics"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "interpro-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "interpro-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "iso-13485-certification", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "iso-13485-certification"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "jaspar-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "jaspar-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "kegg-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "kegg-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "labarchive-integration", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "labarchive-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "lamindb", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "lamindb"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "latchbio-integration", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "latchbio-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "latex-posters", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "latex-posters"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "literature-review", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "literature-review"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "markdown-mermaid-writing", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "markdown-mermaid-writing"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "market-research-reports", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "market-research-reports"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "markitdown", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "markitdown"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "matchms", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "matchms"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "matlab", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "matlab"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "matplotlib", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "matplotlib"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "medchem", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "medchem"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "metabolomics-workbench-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "metabolomics-workbench-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "modal", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "modal"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "molecular-dynamics", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "molecular-dynamics"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "molfeat", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "molfeat"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "monarch-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "monarch-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "networkx", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "networkx"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "neurokit2", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "neurokit2"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "neuropixels-analysis", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "neuropixels-analysis"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "offer-k-dense-web", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "offer-k-dense-web"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "omero-integration", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "omero-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "open-notebook", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "open-notebook"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "openalex-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "openalex-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "opentargets-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "opentargets-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "opentrons-integration", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "opentrons-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "paper-2-web", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "paper-2-web"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "parallel-web", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "parallel-web"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pathml", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pathml"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pdb-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pdb-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pdf", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pdf"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "peer-review", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "peer-review"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pennylane", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pennylane"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "perplexity-search", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "perplexity-search"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "phylogenetics", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "phylogenetics"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "plotly", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "plotly"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "polars", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "polars"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pptx", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pptx"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pptx-posters", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pptx-posters"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "primekg", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "primekg"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "protocolsio-integration", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "protocolsio-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pubchem-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pubchem-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pubmed-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pubmed-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pufferlib", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pufferlib"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pydeseq2", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pydeseq2"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pydicom", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pydicom"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pyhealth", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pyhealth"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pylabrobot", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pylabrobot"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pymatgen", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pymatgen"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pymc", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pymc"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pymoo", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pymoo"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pyopenms", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pyopenms"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pysam", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pysam"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pytdc", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pytdc"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pytorch-lightning", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pytorch-lightning"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "pyzotero", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "pyzotero"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "qiskit", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "qiskit"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "qutip", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "qutip"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "rdkit", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "rdkit"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "reactome-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "reactome-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "research-grants", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "research-grants"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "research-lookup", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "research-lookup"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "rowan", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "rowan"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scanpy", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scanpy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scholar-evaluation", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scholar-evaluation"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scientific-brainstorming", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scientific-brainstorming"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scientific-critical-thinking", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scientific-critical-thinking"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scientific-schematics", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scientific-schematics"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scientific-slides", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scientific-slides"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scientific-visualization", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scientific-visualization"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scientific-writing", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scientific-writing"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scikit-bio", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scikit-bio"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scikit-learn", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scikit-learn"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scikit-survival", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scikit-survival"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scvelo", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scvelo"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "scvi-tools", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "scvi-tools"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "seaborn", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "seaborn"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "shap", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "shap"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "simpy", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "simpy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "stable-baselines3", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "stable-baselines3"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "statistical-analysis", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "statistical-analysis"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "statsmodels", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "statsmodels"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "string-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "string-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "sympy", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "sympy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "tiledbvcf", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "tiledbvcf"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "timesfm-forecasting", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "timesfm-forecasting"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "torch-geometric", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "torch-geometric"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "torchdrug", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "torchdrug"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "transformers", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "transformers"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "treatment-plans", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "treatment-plans"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "umap-learn", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "umap-learn"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "uniprot-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "uniprot-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "usfiscaldata", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "usfiscaldata"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "uspto-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "uspto-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "vaex", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "vaex"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "venue-templates", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "venue-templates"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "what-if-oracle", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "what-if-oracle"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "xlsx", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "xlsx"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "zarr-python", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "zarr-python"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_seen", "skill_id": "zinc-database", "platform": "claude-code-antigravity"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "not_installed", "skill_id": "zinc-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "adaptyv"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "aeon"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "alpha-vantage"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "alphafold-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "anndata"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "arboreto"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "arxiv-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "astropy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "benchling-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "bgpt-paper-search"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "bindingdb-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "biopython"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "biorxiv-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "bioservices"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "brenda-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "cbioportal-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "cellxgene-census"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "chembl-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "cirq"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "citation-management"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "clinical-decision-support"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "clinical-reports"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "clinicaltrials-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "clinpgx-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "clinvar-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "cobrapy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "consciousness-council"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "cosmic-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "dask"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "datacommons-client"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "datamol"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "deepchem"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "deeptools"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "denario"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "depmap"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "dhdna-profiler"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "diffdock"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "dnanexus-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "docx"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "drugbank-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "edgartools"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "ena-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "ensembl-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "esm"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "etetoolkit"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "exploratory-data-analysis"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "fda-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "flowio"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "fluidsim"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "fred-economic-data"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "gene-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "generate-image"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "geniml"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "geo-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "geomaster"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "geopandas"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "get-available-resources"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "gget"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "ginkgo-cloud-lab"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "glycoengineering"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "gnomad-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "gtars"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "gtex-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "gwas-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "hedgefundmonitor"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "histolab"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "hmdb-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "hypogenic"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "hypothesis-generation"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "imaging-data-commons"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "infographics"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "interpro-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "iso-13485-certification"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "jaspar-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "kegg-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "labarchive-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "lamindb"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "latchbio-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "latex-posters"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "literature-review"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "markdown-mermaid-writing"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "market-research-reports"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "markitdown"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "matchms"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "matlab"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "matplotlib"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "medchem"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "metabolomics-workbench-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "modal"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "molecular-dynamics"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "molfeat"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "monarch-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "networkx"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "neurokit2"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "neuropixels-analysis"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "offer-k-dense-web"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "omero-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "open-notebook"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "openalex-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "opentargets-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "opentrons-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "paper-2-web"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "parallel-web"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pathml"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pdb-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pdf"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "peer-review"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pennylane"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "perplexity-search"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "phylogenetics"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "plotly"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "polars"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pptx"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pptx-posters"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "primekg"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "protocolsio-integration"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pubchem-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pubmed-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pufferlib"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pydeseq2"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pydicom"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pyhealth"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pylabrobot"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pymatgen"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pymc"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pymoo"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pyopenms"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pysam"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pytdc"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pytorch-lightning"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "pyzotero"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "qiskit"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "qutip"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "rdkit"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "reactome-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "research-grants"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "research-lookup"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "rowan"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scanpy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scholar-evaluation"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scientific-brainstorming"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scientific-critical-thinking"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scientific-schematics"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scientific-slides"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scientific-visualization"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scientific-writing"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scikit-bio"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scikit-learn"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scikit-survival"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scvelo"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "scvi-tools"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "seaborn"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "shap"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "simpy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "stable-baselines3"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "statistical-analysis"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "statsmodels"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "string-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "sympy"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "tiledbvcf"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "timesfm-forecasting"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "torch-geometric"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "torchdrug"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "transformers"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "treatment-plans"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "umap-learn"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "uniprot-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "usfiscaldata"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "uspto-database"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "vaex"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "venue-templates"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "what-if-oracle"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "xlsx"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "zarr-python"}
+{"created_at": "2026-04-20T19:26:08+08:00", "event": "pruned", "skill_id": "zinc-database"}
+{"created_at": "2026-04-20T20:14:47+08:00", "event": "new_platform", "skill_id": "agent-browser", "platform": "trae", "version": "unknown", "ref": "sha256:897a728048034c7f626eb5fc6eaacc574b4b15c72db5869f3fe9fa070805b317"}
+{"created_at": "2026-04-20T20:14:47+08:00", "event": "new_platform", "skill_id": "brainstorming", "platform": "trae", "version": "unknown", "ref": "sha256:7a238df1ebf0656c1da199aafafcc78c42f47bf4e56dd4e007a67afbb10af455"}
+{"created_at": "2026-04-20T20:14:47+08:00", "event": "new_platform", "skill_id": "consulting-analysis", "platform": "trae", "version": "unknown", "ref": "sha256:5bc99df7e5f8af5471eaa5d20b85fc46e99895cf3f2642fa9da94108d03ca13e"}
+{"created_at": "2026-04-20T20:14:47+08:00", "event": "new_platform", "skill_id": "find-skills", "platform": "trae", "version": "unknown", "ref": "sha256:e2f2f737e3795be94573711242341315cd82735b088248ab880fdafbb2010b9a"}
+{"created_at": "2026-04-20T20:14:47+08:00", "event": "new_platform", "skill_id": "frontend-design", "platform": "trae", "version": "unknown", "ref": "sha256:70044bbc8e4c21d23b8c8b864956aa1515c1c6cb2f9df14148dbb8c4af6187e5"}
+{"created_at": "2026-04-20T20:14:47+08:00", "event": "new_platform", "skill_id": "industry-research", "platform": "trae", "version": "unknown", "ref": "sha256:dccff7952cc7824556c97e4ca4f5fdaf6bd7112263f5b33d4c37f28a78ec3e21"}
+{"created_at": "2026-04-20T20:14:47+08:00", "event": "new_platform", "skill_id": "release-skills", "platform": "trae", "version": "unknown", "ref": "sha256:022ab73365a828b67acaaf5829e8e7b3be844e6586f764a1526dd05416721dbf"}
+{"created_at": "2026-04-20T20:14:47+08:00", "event": "new_platform", "skill_id": "web-research", "platform": "trae", "version": "unknown", "ref": "sha256:c3f27d6cf18173ba544d3fc4cd3e4a6bd914569cb25f3ba9cc65aaef2c0f8395"}
+{"created_at": "2026-04-21T12:10:35+08:00", "event": "added", "skill_id": "skillcere", "platform": "trae-codex", "version": "unknown", "ref": "sha256:3b87b9f428ed03aaf0220575ff1efd824b15cc479ae2238388a9b1ad560c5132"}
+{"created_at": "2026-04-21T14:17:10+08:00", "event": "not_seen", "skill_id": "skillcere", "platform": "trae-codex"}
+{"created_at": "2026-04-21T14:17:10+08:00", "event": "not_installed", "skill_id": "skillcere"}
