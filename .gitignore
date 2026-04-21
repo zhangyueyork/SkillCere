@@ -23,5 +23,6 @@ Desktop.ini
 # Runtime output that can be regenerated
 *.log
 recommendations/
+exports/
 __pycache__/
 *.pyc

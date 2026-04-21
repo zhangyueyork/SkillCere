@@ -11,18 +11,60 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = Path(__file__).resolve().parents[1]
 INDEX_FILE = ROOT / "skill-index.json"
 PLATFORMS_FILE = ROOT / "platforms.json"
 LOCAL_PLATFORMS_FILE = ROOT / "platforms.local.json"
 INSTALL_LOG_FILE = ROOT / "install-log.jsonl"
 SKILL_FILE_NAME = "SKILL.md"
+DEFAULT_LOCAL_PLATFORMS = {
+    "schema_version": "1.0.0",
+    "updated_at": "",
+    "platform_skill_dirs": {
+        "codex": [
+            {
+                "path": str(Path.home() / ".codex" / "skills"),
+                "role": "target",
+                "write_policy": "read_write",
+            }
+        ],
+        "agents": [
+            {
+                "path": str(Path.home() / ".agents" / "skills"),
+                "role": "target",
+                "write_policy": "read_write",
+            }
+        ],
+        "claude-code": [
+            {
+                "path": str(Path.home() / ".claude" / "skills"),
+                "role": "target",
+                "write_policy": "read_write",
+            }
+        ],
+        "gemini": [
+            {
+                "path": str(Path.home() / ".gemini" / "skills"),
+                "role": "target",
+                "write_policy": "read_write",
+            }
+        ],
+    },
+    "excluded_dirs": [],
+}
+SYNC_FILES = [
+    INDEX_FILE,
+    INSTALL_LOG_FILE,
+    ROOT / "version-cache.json",
+    PLATFORMS_FILE,
+]
 
 
 def now_iso() -> str:
@@ -45,10 +87,125 @@ def write_json(path: Path, data: dict[str, Any]) -> None:
     )
 
 
+def ensure_project_files() -> None:
+    if not INDEX_FILE.exists():
+        write_json(
+            INDEX_FILE,
+            {
+                "schema_version": "1.0.0",
+                "updated_at": now_iso(),
+                "skills": {},
+                "aliases": {},
+                "tags": {},
+            },
+        )
+    if not PLATFORMS_FILE.exists():
+        write_json(
+            PLATFORMS_FILE,
+            {
+                "schema_version": "1.0.0",
+                "platforms": {},
+            },
+        )
+    if not (ROOT / "version-cache.json").exists():
+        write_json(ROOT / "version-cache.json", {"schema_version": "1.0.0", "items": {}})
+    if not INSTALL_LOG_FILE.exists():
+        INSTALL_LOG_FILE.write_text("", encoding="utf-8")
+
+
+def ensure_local_config() -> bool:
+    if LOCAL_PLATFORMS_FILE.exists():
+        return False
+    local = DEFAULT_LOCAL_PLATFORMS.copy()
+    local["updated_at"] = now_iso()
+    write_json(LOCAL_PLATFORMS_FILE, local)
+    return True
+
+
 def append_log(event: dict[str, Any]) -> None:
     event = {"created_at": now_iso(), **event}
     with INSTALL_LOG_FILE.open("a", encoding="utf-8") as file:
         file.write(json.dumps(event, ensure_ascii=False) + "\n")
+
+
+def relative_to_root(path: Path) -> str:
+    return str(path.relative_to(ROOT)).replace("\\", "/")
+
+
+def run_git(args: list[str], check: bool = False) -> subprocess.CompletedProcess[str]:
+    result = subprocess.run(
+        ["git", *args],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+    if check and result.returncode != 0:
+        detail = (result.stderr or result.stdout).strip()
+        raise RuntimeError(detail or f"git {' '.join(args)} failed")
+    return result
+
+
+def sync_skill_index(
+    message: str | None = None,
+    *,
+    dry_run: bool = False,
+    push: bool = True,
+) -> int:
+    if run_git(["rev-parse", "--is-inside-work-tree"]).returncode != 0:
+        print("Sync skipped: SkillCere is not inside a Git repository.")
+        return 0
+
+    existing_files = [path for path in SYNC_FILES if path.exists()]
+    if not existing_files:
+        print("Sync skipped: no syncable SkillCere files exist.")
+        return 0
+
+    relative_files = [relative_to_root(path) for path in existing_files]
+    status = run_git(["status", "--porcelain", "--", *relative_files], check=True)
+    changed = status.stdout
+
+    if dry_run:
+        print("SkillCere sync dry run")
+        if changed.strip():
+            print(changed.rstrip())
+        else:
+            print("No skill index changes to sync.")
+        return 0
+
+    if not changed.strip():
+        print("No skill index changes to sync.")
+        return 0
+
+    run_git(["add", "--", *relative_files], check=True)
+    staged = run_git(["diff", "--cached", "--name-only", "--", *relative_files], check=True)
+    staged_files = [line.strip() for line in staged.stdout.splitlines() if line.strip()]
+    if not staged_files:
+        print("No skill index changes staged for sync.")
+        return 0
+
+    commit_message = message or "Sync SkillCere skill index"
+    try:
+        run_git(["commit", "-m", commit_message], check=True)
+    except RuntimeError as error:
+        print(f"Sync commit failed: {error}", file=sys.stderr)
+        return 1
+
+    remotes = [line.strip() for line in run_git(["remote"]).stdout.splitlines() if line.strip()]
+    if not push:
+        print("Skill index committed locally. Push skipped by --no-push.")
+        return 0
+    if not remotes:
+        print("Skill index committed locally. No Git remote configured, so GitHub upload was skipped.")
+        return 0
+
+    try:
+        run_git(["push"], check=True)
+    except RuntimeError as error:
+        print(f"Sync push failed: {error}", file=sys.stderr)
+        return 1
+
+    print("Skill index synced to Git remote.")
+    return 0
 
 
 def normalize_id(value: str) -> str:
@@ -285,13 +442,17 @@ def aggregate_duplicate_skills(skills: list[dict[str, Any]]) -> list[dict[str, A
 
 
 def load_scan_config() -> tuple[dict[str, Any], dict[str, Any], list[Path]]:
+    ensure_project_files()
+    created_local = ensure_local_config()
+    if created_local:
+        print(f"Created local scan config: {LOCAL_PLATFORMS_FILE}")
     platforms = read_json(PLATFORMS_FILE, {"platforms": {}})
     local = read_json(LOCAL_PLATFORMS_FILE, {"platform_skill_dirs": {}, "excluded_dirs": []})
     excluded = [Path(item).expanduser() for item in local.get("excluded_dirs", [])]
     return platforms, local, excluded
 
 
-def command_scan(_: argparse.Namespace) -> int:
+def command_scan(args: argparse.Namespace) -> int:
     index = ensure_index_shape(read_json(INDEX_FILE))
     platforms, local, excluded_dirs = load_scan_config()
     known_platforms = set(platforms.get("platforms", {}).keys())
@@ -300,11 +461,14 @@ def command_scan(_: argparse.Namespace) -> int:
     updated = 0
     unchanged = 0
     scanned = 0
+    current_by_platform: dict[str, set[str]] = {}
+    scanned_platforms: set[str] = set()
     missing_roots: list[str] = []
 
     for platform, roots in local.get("platform_skill_dirs", {}).items():
         if known_platforms and platform not in known_platforms:
             print(f"Warning: {platform} is not defined in platforms.json", file=sys.stderr)
+        current_by_platform.setdefault(platform, set())
 
         for root_config in roots:
             if root_config.get("role", "target") not in {"target", "system"}:
@@ -313,8 +477,10 @@ def command_scan(_: argparse.Namespace) -> int:
             if not root.exists():
                 missing_roots.append(f"{platform}: {root}")
                 continue
+            scanned_platforms.add(platform)
             discovered = [read_skill(skill_dir) for skill_dir in discover_skill_dirs(root, excluded_dirs)]
             for skill in aggregate_duplicate_skills(discovered):
+                current_by_platform[platform].add(skill["id"])
                 event_type = merge_skill(index, skill, platform)
                 scanned += 1
                 if event_type == "added":
@@ -334,6 +500,32 @@ def command_scan(_: argparse.Namespace) -> int:
                         }
                     )
 
+    stale_platform_refs = 0
+    stale_skills = 0
+    for skill_id, skill in index["skills"].items():
+        installed_on = skill.get("installed_on") or {}
+        for platform in list(installed_on.keys()):
+            if platform not in scanned_platforms:
+                continue
+            if skill_id not in current_by_platform.get(platform, set()):
+                del installed_on[platform]
+                stale_platform_refs += 1
+                append_log(
+                    {
+                        "event": "not_seen",
+                        "skill_id": skill_id,
+                        "platform": platform,
+                    }
+                )
+        skill["installed_on"] = installed_on
+        if installed_on:
+            skill["status"] = "active"
+        else:
+            if skill.get("status") != "not_installed":
+                stale_skills += 1
+                append_log({"event": "not_installed", "skill_id": skill_id})
+            skill["status"] = "not_installed"
+
     index["updated_at"] = now_iso()
     write_json(INDEX_FILE, index)
 
@@ -341,20 +533,29 @@ def command_scan(_: argparse.Namespace) -> int:
     print(f"Added skills: {added}")
     print(f"Updated or new platform sightings: {updated}")
     print(f"Unchanged sightings: {unchanged}")
+    print(f"Stale platform sightings marked: {stale_platform_refs}")
+    print(f"Skills marked not_installed: {stale_skills}")
     print(f"Total indexed skills: {len(index['skills'])}")
     if missing_roots:
         print("Missing scan roots:")
         for item in missing_roots:
             print(f"  - {item}")
+    if not args.no_sync:
+        print()
+        sync_result = sync_skill_index()
+        if sync_result != 0:
+            return sync_result
     return 0
 
 
 def command_status(_: argparse.Namespace) -> int:
+    ensure_project_files()
     index = ensure_index_shape(read_json(INDEX_FILE))
     skills = index["skills"]
     platform_counts: dict[str, int] = {}
     missing_source = 0
     unknown_version = 0
+    not_installed = 0
 
     for skill in skills.values():
         source = skill.get("source") or {}
@@ -362,11 +563,15 @@ def command_status(_: argparse.Namespace) -> int:
             missing_source += 1
         if skill.get("latest_version") in {"", None, "unknown"}:
             unknown_version += 1
+        if skill.get("status") == "not_installed" or not (skill.get("installed_on") or {}):
+            not_installed += 1
         for platform in (skill.get("installed_on") or {}).keys():
             platform_counts[platform] = platform_counts.get(platform, 0) + 1
 
     print("SkillCere status")
     print(f"  Indexed skills: {len(skills)}")
+    print(f"  Installed skills: {len(skills) - not_installed}")
+    print(f"  Not installed skills: {not_installed}")
     print(f"  Missing source URL: {missing_source}")
     print(f"  Unknown version: {unknown_version}")
     print("  Installed by platform:")
@@ -375,6 +580,37 @@ def command_status(_: argparse.Namespace) -> int:
             print(f"    {platform}: {count}")
     else:
         print("    none")
+    return 0
+
+
+def command_prune(args: argparse.Namespace) -> int:
+    ensure_project_files()
+    index = ensure_index_shape(read_json(INDEX_FILE))
+    skills = index["skills"]
+    removable = [
+        skill_id
+        for skill_id, skill in skills.items()
+        if skill.get("status") == "not_installed" or not (skill.get("installed_on") or {})
+    ]
+    removable.sort()
+
+    if not args.drop_not_installed:
+        print(f"Not installed skills eligible for pruning: {len(removable)}")
+        for skill_id in removable[:50]:
+            print(f"  - {skill_id}")
+        if len(removable) > 50:
+            print(f"  ... and {len(removable) - 50} more")
+        print("Run with --drop-not-installed to delete these records from skill-index.json.")
+        return 0
+
+    for skill_id in removable:
+        del skills[skill_id]
+        append_log({"event": "pruned", "skill_id": skill_id})
+
+    index["updated_at"] = now_iso()
+    write_json(INDEX_FILE, index)
+    print(f"Pruned not installed skills: {len(removable)}")
+    print(f"Remaining indexed skills: {len(skills)}")
     return 0
 
 
@@ -446,6 +682,7 @@ def command_context(args: argparse.Namespace) -> int:
         print("Please provide a task description.", file=sys.stderr)
         return 2
 
+    ensure_project_files()
     index = ensure_index_shape(read_json(INDEX_FILE))
     print(build_agent_context(query, index, args.max_skills))
     return 0
@@ -457,6 +694,165 @@ def command_recommend(args: argparse.Namespace) -> int:
     return command_context(args)
 
 
+def command_sync(args: argparse.Namespace) -> int:
+    return sync_skill_index(
+        args.message,
+        dry_run=args.dry_run,
+        push=not args.no_push,
+    )
+
+
+def command_export_excel(args: argparse.Namespace) -> int:
+    try:
+        from openpyxl import Workbook
+        from openpyxl.styles import Alignment, Font, PatternFill
+        from openpyxl.utils import get_column_letter
+        from openpyxl.worksheet.table import Table, TableStyleInfo
+    except ImportError as error:
+        print("openpyxl is required for export-excel.", file=sys.stderr)
+        raise SystemExit(2) from error
+
+    ensure_project_files()
+    index = ensure_index_shape(read_json(INDEX_FILE))
+    out_path = Path(args.output) if args.output else ROOT / "exports" / "skillcere-skill-list.xlsx"
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+
+    rows: list[dict[str, Any]] = []
+    platform_counts: dict[str, int] = {}
+    missing_source = 0
+    unknown_version = 0
+
+    for skill_id, skill in sorted(index.get("skills", {}).items(), key=lambda item: item[0].lower()):
+        if args.current_only and (skill.get("status") == "not_installed" or not (skill.get("installed_on") or {})):
+            continue
+        installed_on = skill.get("installed_on") or {}
+        platforms = sorted(installed_on.keys())
+        for platform in platforms:
+            platform_counts[platform] = platform_counts.get(platform, 0) + 1
+        source = skill.get("source") or {}
+        source_url = source.get("url") or ""
+        version = skill.get("latest_version") or "unknown"
+        if not source_url:
+            missing_source += 1
+        if version == "unknown":
+            unknown_version += 1
+        last_seen_values = [
+            value.get("last_seen", "")
+            for value in installed_on.values()
+            if isinstance(value, dict)
+        ]
+        rows.append(
+            {
+                "skill_id": skill_id,
+                "name": skill.get("name", ""),
+                "display_name": skill.get("display_name", ""),
+                "description": skill.get("description", ""),
+                "keywords": ", ".join(skill.get("keywords", []) or []),
+                "categories": ", ".join(skill.get("categories", []) or []),
+                "installed_on": ", ".join(platforms),
+                "platform_count": len(platforms),
+                "latest_version": version,
+                "version_strategy": skill.get("version_strategy", ""),
+                "source_type": source.get("type", ""),
+                "source_url_available": "yes" if source_url else "no",
+                "source_url": source_url,
+                "last_checked": skill.get("last_checked", ""),
+                "last_seen": max(last_seen_values) if last_seen_values else "",
+                "status": skill.get("status", ""),
+                "notes": skill.get("notes", ""),
+            }
+        )
+
+    headers = [
+        "skill_id",
+        "name",
+        "display_name",
+        "description",
+        "keywords",
+        "categories",
+        "installed_on",
+        "platform_count",
+        "latest_version",
+        "version_strategy",
+        "source_type",
+        "source_url_available",
+        "source_url",
+        "last_checked",
+        "last_seen",
+        "status",
+        "notes",
+    ]
+
+    workbook = Workbook()
+    sheet = workbook.active
+    sheet.title = "skills"
+    sheet.append(headers)
+    for row in rows:
+        sheet.append([row.get(header, "") for header in headers])
+
+    header_fill = PatternFill("solid", fgColor="1F4E78")
+    header_font = Font(color="FFFFFF", bold=True)
+    for cell in sheet[1]:
+        cell.fill = header_fill
+        cell.font = header_font
+        cell.alignment = Alignment(horizontal="center", vertical="center")
+
+    sheet.freeze_panes = "A2"
+    sheet.auto_filter.ref = sheet.dimensions
+    for column_index, header in enumerate(headers, 1):
+        letter = get_column_letter(column_index)
+        if header == "description":
+            width = 70
+        elif header in {"keywords", "installed_on", "source_url"}:
+            width = 36
+        elif header in {"skill_id", "display_name"}:
+            width = 28
+        else:
+            width = 18
+        sheet.column_dimensions[letter].width = width
+
+    for row in sheet.iter_rows(min_row=2):
+        for cell in row:
+            cell.alignment = Alignment(vertical="top", wrap_text=True)
+
+    if rows:
+        table_ref = f"A1:{get_column_letter(len(headers))}{len(rows) + 1}"
+        table = Table(displayName="SkillList", ref=table_ref)
+        table.tableStyleInfo = TableStyleInfo(
+            name="TableStyleMedium2",
+            showFirstColumn=False,
+            showLastColumn=False,
+            showRowStripes=True,
+            showColumnStripes=False,
+        )
+        sheet.add_table(table)
+
+    summary = workbook.create_sheet("summary")
+    summary.append(["metric", "value"])
+    summary_rows = [
+        ("generated_at", now_iso()),
+        ("indexed_skills", len(rows)),
+        ("missing_source_url", missing_source),
+        ("unknown_version", unknown_version),
+        ("current_only", str(args.current_only).lower()),
+    ]
+    for item in summary_rows:
+        summary.append(list(item))
+    summary.append([])
+    summary.append(["platform", "skill_count"])
+    for platform, count in sorted(platform_counts.items()):
+        summary.append([platform, count])
+    for cell in summary[1]:
+        cell.fill = header_fill
+        cell.font = header_font
+    summary.column_dimensions["A"].width = 28
+    summary.column_dimensions["B"].width = 40
+
+    workbook.save(out_path)
+    print(out_path)
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="skillcere",
@@ -465,10 +861,15 @@ def build_parser() -> argparse.ArgumentParser:
     subcommands = parser.add_subparsers(dest="command", required=True)
 
     scan = subcommands.add_parser("scan", help="Scan local skill directories into the central index.")
+    scan.add_argument("--no-sync", action="store_true", help="Do not sync the central index after scanning.")
     scan.set_defaults(func=command_scan)
 
     status = subcommands.add_parser("status", help="Show central index status.")
     status.set_defaults(func=command_status)
+
+    prune = subcommands.add_parser("prune", help="Prune not-installed skills from the central index.")
+    prune.add_argument("--drop-not-installed", action="store_true", help="Delete not-installed skill records.")
+    prune.set_defaults(func=command_prune)
 
     context = subcommands.add_parser("context", help="Generate skill recommendation context for an Agent.")
     context.add_argument("task", nargs="+", help="Task description.")
@@ -479,6 +880,17 @@ def build_parser() -> argparse.ArgumentParser:
     recommend.add_argument("task", nargs="+", help="Task description.")
     recommend.add_argument("--max-skills", type=int, default=300, help="Maximum number of indexed skills to include.")
     recommend.set_defaults(func=command_recommend)
+
+    sync = subcommands.add_parser("sync", help="Commit and push central skill index files.")
+    sync.add_argument("-m", "--message", help="Git commit message.")
+    sync.add_argument("--dry-run", action="store_true", help="Show syncable changes without committing.")
+    sync.add_argument("--no-push", action="store_true", help="Commit locally but do not push.")
+    sync.set_defaults(func=command_sync)
+
+    export_excel = subcommands.add_parser("export-excel", help="Export the central index to an Excel workbook.")
+    export_excel.add_argument("--output", help="Output .xlsx path.")
+    export_excel.add_argument("--current-only", action="store_true", help="Export only currently installed skills.")
+    export_excel.set_defaults(func=command_export_excel)
 
     return parser
 
