@@ -61,17 +61,23 @@ python "<skillcere-root>\scripts\skillcere.py" context "<user task>"
 ```
 
 4. Read the returned context carefully.
-5. As the current Agent, decide:
+5. Use external skill discovery when useful:
+   - If the indexed/installed skill list is incomplete for the task, invoke the available `find-skills` capability or CLI to search external skills.
+   - Keep external search results separate from indexed/installed skills.
+   - Do not present external skills as installed unless SkillCere context explicitly shows them in `installed_on`.
+6. As the current Agent, decide:
    - which skills are most relevant,
    - which of them are already installed,
+   - which external candidate skills may be worth installing,
    - whether installation or update may be needed,
    - what startup instruction should be given before execution.
-6. Present the result in this shape:
+7. Present the result in this shape:
    - recommended skills,
+   - external candidate skills, when any were found,
    - version status,
    - install/update suggestion,
    - startup instruction for the executing Agent.
-7. Stop after presenting the recommendation. Do not execute the user's underlying task unless the user explicitly says to continue or start.
+8. Stop after presenting the recommendation. Do not execute the user's underlying task unless the user explicitly says to continue or start.
 
 ## Manual Management Actions
 
@@ -134,19 +140,30 @@ After reading SkillCere context, produce:
 - Skill id
 - Why it is relevant
 - Which task step it helps with
+- Exact installed platforms from `installed_on`; if none are listed, say the index has no recorded installed platform
 
-### 2. Version status
+### 2. External candidate skills
+
+- Skill id/name from `find-skills`
+- Why it may help
+- Install command or source only when provided by `find-skills`
+- Clear note that it is external/not installed when it is not present in SkillCere context
+
+Omit this section only when external discovery was not needed or found no useful candidates.
+
+### 3. Version status
 
 - Known version or unknown
 - Whether remote latest version can be confirmed
 
-### 3. Install or update suggestions
+### 4. Install or update suggestions
 
 - Already installed in current platform
 - Installed in another platform
 - Missing and may need installation
+- External candidate skills that need installation before use
 
-### 4. Startup instruction
+### 5. Startup instruction
 
 A concise instruction the executing Agent can directly follow, for example:
 
@@ -165,5 +182,7 @@ If a required skill is not installed in the current platform, install it first o
 - Do not modify tool skill directories unless the user explicitly asks.
 - Do not treat cache, temp, vendor, or `node_modules` directories as official skill sources.
 - Do not invent source URLs or versions that SkillCere does not know.
+- Do not invent external skill names, source URLs, install commands, or versions that were not returned by `find-skills`.
+- Always report exact installed platforms for recommended indexed skills using the `installed_on` field.
 - Treat platform hints as secondary. The primary output is the recommended skill set.
 - Only sync central registry files. Do not sync `platforms.local.json`, Excel exports, user tasks, or unrelated code changes.
