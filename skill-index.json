@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-04-21T20:11:38+08:00",
+  "updated_at": "2026-04-21T20:12:06+08:00",
   "skills": {
     "imagegen": {
       "id": "imagegen",
@@ -38,7 +38,7 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:1c3860b6eb079badaceaa2a5792fd26f23a258dc8fa2a04d1677d8d9b8022763",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "codex": {
@@ -87,7 +87,7 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:972a098930f8c935812ace80c2b7b814dafacf65e7da3ea2ce2ce034911cd2b4",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "codex": {
@@ -136,7 +136,7 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:d7c5a754c137d2e5e6924f998e35c0c88c4a051a38024e92fae90003caf58e82",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "codex": {
@@ -196,13 +196,13 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:2940e08d49e5197453e58a4387d14cb07101b97911c992ef75c8289e0a1734c0",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:98fa14ff1b45d68323a5f2ba7aa100f0300f3ce55ebaa2d535253e6f898f3331",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         },
         "codex": {
@@ -220,7 +220,7 @@
         "gemini-antigravity": {
           "version": "unknown",
           "ref": "sha256:7ffe12d53e7b0df33e7a3bc4c4d7eeafcf855fde0c309fe09b5211bcc5af49e1",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -263,7 +263,7 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:2d3be2289274cbffb9eb632b25a1038aa7f369df6aaa0964077c77648547e01d",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "codex": {
@@ -313,13 +313,13 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:897a728048034c7f626eb5fc6eaacc574b4b15c72db5869f3fe9fa070805b317",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "trae": {
           "version": "unknown",
           "ref": "sha256:897a728048034c7f626eb5fc6eaacc574b4b15c72db5869f3fe9fa070805b317",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "agents": {
@@ -369,13 +369,13 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:7a238df1ebf0656c1da199aafafcc78c42f47bf4e56dd4e007a67afbb10af455",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "trae": {
           "version": "unknown",
           "ref": "sha256:7a238df1ebf0656c1da199aafafcc78c42f47bf4e56dd4e007a67afbb10af455",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "agents": {
@@ -425,13 +425,13 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:5bc99df7e5f8af5471eaa5d20b85fc46e99895cf3f2642fa9da94108d03ca13e",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "trae": {
           "version": "unknown",
           "ref": "sha256:5bc99df7e5f8af5471eaa5d20b85fc46e99895cf3f2642fa9da94108d03ca13e",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "agents": {
@@ -490,19 +490,19 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:e2f2f737e3795be94573711242341315cd82735b088248ab880fdafbb2010b9a",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "comate": {
           "version": "unknown",
           "ref": "sha256:3c06b7f5f2798ff8b0cab51951c2b322d2fc0ea74e237cfb3c2be3ae45a0fb02",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         },
         "trae": {
           "version": "unknown",
           "ref": "sha256:e2f2f737e3795be94573711242341315cd82735b088248ab880fdafbb2010b9a",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         },
         "agents": {
@@ -552,13 +552,13 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:70044bbc8e4c21d23b8c8b864956aa1515c1c6cb2f9df14148dbb8c4af6187e5",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "trae": {
           "version": "unknown",
           "ref": "sha256:70044bbc8e4c21d23b8c8b864956aa1515c1c6cb2f9df14148dbb8c4af6187e5",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         },
         "agents": {
@@ -608,13 +608,13 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:dccff7952cc7824556c97e4ca4f5fdaf6bd7112263f5b33d4c37f28a78ec3e21",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "trae": {
           "version": "unknown",
           "ref": "sha256:dccff7952cc7824556c97e4ca4f5fdaf6bd7112263f5b33d4c37f28a78ec3e21",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         },
         "agents": {
@@ -664,13 +664,13 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:022ab73365a828b67acaaf5829e8e7b3be844e6586f764a1526dd05416721dbf",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "trae": {
           "version": "unknown",
           "ref": "sha256:022ab73365a828b67acaaf5829e8e7b3be844e6586f764a1526dd05416721dbf",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         },
         "agents": {
@@ -720,13 +720,13 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:c3f27d6cf18173ba544d3fc4cd3e4a6bd914569cb25f3ba9cc65aaef2c0f8395",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "trae": {
           "version": "unknown",
           "ref": "sha256:c3f27d6cf18173ba544d3fc4cd3e4a6bd914569cb25f3ba9cc65aaef2c0f8395",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         },
         "agents": {
@@ -774,7 +774,7 @@
         "gemini-antigravity": {
           "version": "unknown",
           "ref": "sha256:69b0da0a4286b641e69bbabdb98005460169dc1fe6e1b8aeda064a7a5830393d",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -816,7 +816,7 @@
         "gemini-antigravity": {
           "version": "unknown",
           "ref": "sha256:24f72fa724439937c298a0a9a70f2e71fb6f89b930544ed2e69741f879da1a7b",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -868,7 +868,7 @@
         "gemini-antigravity": {
           "version": "unknown",
           "ref": "sha256:85f4400e9eafd2bf0b41616cad13bad515bf83b8475d07738db1ab270cdd1b59",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -917,7 +917,7 @@
         "gemini-antigravity": {
           "version": "unknown",
           "ref": "sha256:bd62ff780856ac8bcedf0e3447eb78b2378f788ebcb74385a2c7e5bc16df003a",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -969,7 +969,7 @@
         "gemini-antigravity": {
           "version": "unknown",
           "ref": "sha256:50840b26ce8ac8b144fc11f12cd58ef1843cbc6f1e94f9339698190a69591ea0",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1018,7 +1018,7 @@
         "gemini-antigravity": {
           "version": "unknown",
           "ref": "sha256:39980a3487d2875d77df13f9b3ba3d0b944e18f2e7e79a7b7786c1406889801a",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1063,7 +1063,7 @@
         "claude-code-antigravity": {
           "version": "unknown",
           "ref": "sha256:7d965957d68159d9500ac45cbcb93d9178361fe5f47ee93703e2a38b7067be06",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         },
         "claude-code": {
@@ -1075,13 +1075,13 @@
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:421bd7009bafc7a8d09b5999ff65af23e9f32a4d9b6ad486fe165240640b6860",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         },
         "trae": {
           "version": "unknown",
           "ref": "sha256:421bd7009bafc7a8d09b5999ff65af23e9f32a4d9b6ad486fe165240640b6860",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         }
       },
@@ -1123,7 +1123,7 @@
         "comate": {
           "version": "unknown",
           "ref": "sha256:4b76fd8ecb1b7e1269ea2e03a8b0a4d46546be9dceacf86ad03fe57105225733",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1165,7 +1165,7 @@
         "comate": {
           "version": "unknown",
           "ref": "sha256:bdb99ff7213603039185f80946266ea4772be783984bfa90362acd58764a734f",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1207,7 +1207,7 @@
         "comate": {
           "version": "unknown",
           "ref": "sha256:01b0fb977dce34c0624078342324c6f9b8bb5943dd2632de1fc6bf27493618e2",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1249,7 +1249,7 @@
         "comate": {
           "version": "unknown",
           "ref": "sha256:25680f80968e2ff8fa7d670cf8b1d75fd50237da363acf5be7c5a81650b616ac",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1291,7 +1291,7 @@
         "comate": {
           "version": "unknown",
           "ref": "sha256:507af3123943221dd53816ec14547bb518d68743bd7df397ed6753dd138b0482",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1333,7 +1333,7 @@
         "comate": {
           "version": "unknown",
           "ref": "sha256:a8c6a971728287967f7d2b0d79bff0edd514a185ad8f7567f155362a5f3f2ec2",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1375,7 +1375,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:4305aa15a3c11cbb2c5dcf4cdc76d68d12207e13748d00d794e3937004f125df",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1417,7 +1417,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:f7a7d3dd5f1817d566c804072eac93c6a699f1db5417a07c76ca5af1287e5743",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1459,7 +1459,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:01f3cd349c39a1943bdde367b07ec97a4c66df23f3e06b7e6888170b9c21f868",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1501,7 +1501,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:303f113875adc5fabfcfc70449cf6b178d0808aa22fc297563500b9b7f6761d7",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1543,7 +1543,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:8091df41f2d27de31c8b89401c0da632f4c8fef26ac56c213014c79bdfc81cb9",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1585,7 +1585,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:56bb341604f951985e451df450744d1d78cd9ba905b6df8952084343b35a95b3",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1635,7 +1635,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256-multi:23fde591d0c561461b212abe85115db3ffb52fb97a3ffb57f420d2ac252eba05",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1677,7 +1677,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:509b7a4b41ad73856f6917644bde741a71f4e54a4fa90413c4c914645cf64678",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1719,7 +1719,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:4a4419d51692a0b472b7168a89abcccdc663b8e725453e759fb68b143bc73bb9",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1761,7 +1761,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:986171e439fc8b33c551061fcbd9c146c1012451bf8c1bd5f049c51b8b949775",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1805,7 +1805,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:1ef15b9f82a00380dde11d88014ada8d37e5fa8db9206525931eb367e723791f",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1847,7 +1847,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:b76137b28948e71df4135ce17bf716c128c75614a19cb6b7975d43173d922297",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1889,7 +1889,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:ce8128fee1d777178354c6a34bd83b527dc44054782a87bb2db87d8ff10de79f",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1931,7 +1931,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:8f32198df00ffb8d9996ef1dfeb8428207bbde528bd9dbe16be053c7802d17d9",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -1974,7 +1974,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:c88811e43b56cc39ea7ad6057a8455823f170fdc41c1165d2aafa92c1bf6c9ef",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2016,7 +2016,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:f96965d1f525716e73048dcb75f6a5d037aea3c742e78be08cf2b06a4488b885",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2058,7 +2058,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:3f3a34755d0b763e30e72daef9b1b751622586efe3087def770950f831f8376a",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2100,7 +2100,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:58d9e56da3f96b4191179d092385ccf06335cec615f44d32d9a593f88b126f44",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2142,7 +2142,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:92023a48f5bfb5d4da2e1993877b684de86a0385bfb13766060a9bbd2872b3fd",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2184,7 +2184,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:1df834468f8f21a907e01c49bf0d94ba97918fd53a3410e697deba37920b7430",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2226,7 +2226,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:4a19c3916062a0b2a303f929be2e11bc89ed8531b47fa565d7936a363f34d4ac",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2268,7 +2268,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:dc45b522a0f08fa11762b330b5355ccaca789bd645b0c450fe75026f69d728b2",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2310,7 +2310,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:c2e0b1679c170217b5e6f13285245aa23192fd7f47ef8fe4807d3d0273cb1e59",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2352,7 +2352,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:e517a418ea0e38a9e0eca3a6d59646e670b3d4fcad4e6a755c186e7a3ce3539e",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2394,7 +2394,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:bb860b46acd586b1d9a4fb931bdde9f63d6845852868eb6e79cca074c2c20c61",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2436,7 +2436,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:571521d9f6f38b3ec9f073d7bdec47170a35e9c78556954ac7f0f860ab12873b",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2478,7 +2478,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:808e854691696a83af77e1c0ab158e84ccde63fd48b4c8a8966068d14629dcae",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2520,7 +2520,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:364116d836fff018f77342df39d7e6b069be5b7c1cc4cdbc7d0450c718fe8049",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2562,7 +2562,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:27451fe6363ad687c4fe32713ebb9e30c54259546b6520ea3b989a93008a1be7",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2604,7 +2604,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:cf6071a881a1bbc1663d83e7580912b9be9607e93070936f599b5967ec61801a",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2646,7 +2646,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:6dbd9a696f615077703f345146b42f76ea1a7e1a3c8e38ce534f8934278cd000",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2690,7 +2690,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:82563c5352466755ffceb053dbf94bea7135088b0ce119fd684d0154f2aa53d7",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2732,7 +2732,7 @@
         "openclaw": {
           "version": "unknown",
           "ref": "sha256:7a630443bbaa7a0991e55e11fc873aad49b3b53978d87f9b669249fea313b755",
-          "last_seen": "2026-04-21T20:11:38+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
@@ -2782,14 +2782,14 @@
       "installed_on": {
         "gemini-antigravity": {
           "version": "unknown",
-          "ref": "sha256:39b1356ec71683ca6ce5550fab1d07e5e9130db0ca3d4a55f06f6ca9b2331f74",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "ref": "sha256:2105056c96edd643e2f3746557cd590c367f7c7487878b7bb06c9c3fea78e155",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         },
         "trae-codex": {
           "version": "unknown",
           "ref": "sha256:2105056c96edd643e2f3746557cd590c367f7c7487878b7bb06c9c3fea78e155",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:05+08:00",
           "status": "installed"
         }
       },
@@ -2831,7 +2831,7 @@
         "gemini-antigravity": {
           "version": "unknown",
           "ref": "sha256:21b12ecba7a2add669c2a13f252f961c80331a9c7b3acfc3ad6f79eeb6dfbace",
-          "last_seen": "2026-04-21T20:11:37+08:00",
+          "last_seen": "2026-04-21T20:12:06+08:00",
           "status": "installed"
         }
       },
