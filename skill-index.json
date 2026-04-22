@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-04-22T10:34:10+08:00",
+  "updated_at": "2026-04-22T19:55:03+08:00",
   "skills": {
     "imagegen": {
       "id": "imagegen",
@@ -44,7 +44,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:1c3860b6eb079badaceaa2a5792fd26f23a258dc8fa2a04d1677d8d9b8022763",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:02+08:00",
           "status": "installed"
         }
       },
@@ -93,7 +93,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:972a098930f8c935812ace80c2b7b814dafacf65e7da3ea2ce2ce034911cd2b4",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:02+08:00",
           "status": "installed"
         }
       },
@@ -142,7 +142,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:d7c5a754c137d2e5e6924f998e35c0c88c4a051a38024e92fae90003caf58e82",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:02+08:00",
           "status": "installed"
         }
       },
@@ -208,13 +208,13 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:2940e08d49e5197453e58a4387d14cb07101b97911c992ef75c8289e0a1734c0",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:02+08:00",
           "status": "installed"
         },
         "gemini": {
           "version": "unknown",
           "ref": "sha256:7ffe12d53e7b0df33e7a3bc4c4d7eeafcf855fde0c309fe09b5211bcc5af49e1",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -269,7 +269,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:2d3be2289274cbffb9eb632b25a1038aa7f369df6aaa0964077c77648547e01d",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:02+08:00",
           "status": "installed"
         }
       },
@@ -325,7 +325,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:897a728048034c7f626eb5fc6eaacc574b4b15c72db5869f3fe9fa070805b317",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         }
       },
@@ -381,7 +381,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:7a238df1ebf0656c1da199aafafcc78c42f47bf4e56dd4e007a67afbb10af455",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         }
       },
@@ -437,7 +437,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:5bc99df7e5f8af5471eaa5d20b85fc46e99895cf3f2642fa9da94108d03ca13e",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         }
       },
@@ -508,7 +508,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:e2f2f737e3795be94573711242341315cd82735b088248ab880fdafbb2010b9a",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         }
       },
@@ -564,7 +564,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:70044bbc8e4c21d23b8c8b864956aa1515c1c6cb2f9df14148dbb8c4af6187e5",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         }
       },
@@ -620,7 +620,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:dccff7952cc7824556c97e4ca4f5fdaf6bd7112263f5b33d4c37f28a78ec3e21",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         }
       },
@@ -676,7 +676,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:022ab73365a828b67acaaf5829e8e7b3be844e6586f764a1526dd05416721dbf",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         }
       },
@@ -732,7 +732,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:c3f27d6cf18173ba544d3fc4cd3e4a6bd914569cb25f3ba9cc65aaef2c0f8395",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         }
       },
@@ -862,7 +862,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:85f4400e9eafd2bf0b41616cad13bad515bf83b8475d07738db1ab270cdd1b59",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -911,7 +911,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:bd62ff780856ac8bcedf0e3447eb78b2378f788ebcb74385a2c7e5bc16df003a",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -963,7 +963,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:50840b26ce8ac8b144fc11f12cd58ef1843cbc6f1e94f9339698190a69591ea0",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -1012,7 +1012,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:39980a3487d2875d77df13f9b3ba3d0b944e18f2e7e79a7b7786c1406889801a",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -1070,7 +1070,7 @@
         "claude-code": {
           "version": "unknown",
           "ref": "sha256:7d965957d68159d9500ac45cbcb93d9178361fe5f47ee93703e2a38b7067be06",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         },
         "trae-codex": {
@@ -1088,7 +1088,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:421bd7009bafc7a8d09b5999ff65af23e9f32a4d9b6ad486fe165240640b6860",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:03+08:00",
           "status": "installed"
         }
       },
@@ -2803,7 +2803,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:5181b1afb6ad31ece3625edf591efffaeae6ab6a8058102a1c092a02b4e8492f",
-          "last_seen": "2026-04-22T10:34:10+08:00",
+          "last_seen": "2026-04-22T19:55:02+08:00",
           "status": "installed"
         }
       },
