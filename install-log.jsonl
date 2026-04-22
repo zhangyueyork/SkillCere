@@ -811,3 +811,5 @@
 {"created_at": "2026-04-21T20:11:37+08:00", "event": "updated", "skill_id": "skillcere", "platform": "trae-codex", "version": "unknown", "ref": "sha256:2105056c96edd643e2f3746557cd590c367f7c7487878b7bb06c9c3fea78e155"}
 {"created_at": "2026-04-21T20:11:37+08:00", "event": "new_platform", "skill_id": "clawteam-multi-agent-coordination", "platform": "trae", "version": "unknown", "ref": "sha256:421bd7009bafc7a8d09b5999ff65af23e9f32a4d9b6ad486fe165240640b6860"}
 {"created_at": "2026-04-21T20:12:06+08:00", "event": "updated", "skill_id": "skillcere", "platform": "gemini-antigravity", "version": "unknown", "ref": "sha256:2105056c96edd643e2f3746557cd590c367f7c7487878b7bb06c9c3fea78e155"}
+{"created_at": "2026-04-22T10:34:10+08:00", "event": "new_platform", "skill_id": "skillcere", "platform": "codex", "version": "unknown", "ref": "sha256:5181b1afb6ad31ece3625edf591efffaeae6ab6a8058102a1c092a02b4e8492f"}
+{"created_at": "2026-04-22T10:34:10+08:00", "event": "new_platform", "skill_id": "clawteam-multi-agent-coordination", "platform": "agents", "version": "unknown", "ref": "sha256:421bd7009bafc7a8d09b5999ff65af23e9f32a4d9b6ad486fe165240640b6860"}
