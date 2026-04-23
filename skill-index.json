@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-04-22T19:55:03+08:00",
+  "updated_at": "2026-04-23T16:07:34+08:00",
   "skills": {
     "imagegen": {
       "id": "imagegen",
@@ -23,12 +23,17 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/openai/codex/tree/main/codex-rs/skills/src/assets/samples/imagegen",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "imagegen sample",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:1c3860b6eb079badaceaa2a5792fd26f23a258dc8fa2a04d1677d8d9b8022763",
+      "latest_ref": "sha256:613f892ba9259cbfcb44ee74e81587cc7ce288de86ae2f1eab5eacb190e34f58",
       "status": "active",
       "supported_platforms": [
         "codex",
@@ -48,8 +53,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/openai/codex/tree/main/codex-rs/skills/src/assets/samples/imagegen\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "openai-docs": {
       "id": "openai-docs",
@@ -72,12 +77,17 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/openai/skills/tree/main/skills/.curated/openai-docs",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "openai-docs skill",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:972a098930f8c935812ace80c2b7b814dafacf65e7da3ea2ce2ce034911cd2b4",
+      "latest_ref": "sha256:406c09aa0a6424ffe48fdd93f1901d8a792acfafaab1a77993da88ccae96309f",
       "status": "active",
       "supported_platforms": [
         "codex",
@@ -97,8 +107,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/openai/skills/tree/main/skills/.curated/openai-docs\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "plugin-creator": {
       "id": "plugin-creator",
@@ -121,8 +131,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/openai/skills/tree/main/skills/.system/plugin-creator",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "plugin-creator skill",
+        "confidence": "2-中"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -146,8 +161,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/openai/skills/tree/main/skills/.system/plugin-creator\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "skill-creator": {
       "id": "skill-creator",
@@ -178,12 +193,17 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "anthropics / skill-creator",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:2940e08d49e5197453e58a4387d14cb07101b97911c992ef75c8289e0a1734c0",
+      "latest_ref": "sha256:e030e7685e26283b4a76f5202aa3ae8516fb41dde799be5ae8ea6393ec009fe9",
       "status": "active",
       "supported_platforms": [
         "codex",
@@ -224,8 +244,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/anthropics/skills/tree/main/skills/skill-creator\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "skill-installer": {
       "id": "skill-installer",
@@ -248,12 +268,17 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/openai/skills/tree/main/skills/.system/skill-installer",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "skill-installer skill",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:2d3be2289274cbffb9eb632b25a1038aa7f369df6aaa0964077c77648547e01d",
+      "latest_ref": "sha256:96b62a3cadb458c61a66dfa68a600f2aeaa09797e67459b055e20e4aa77c00eb",
       "status": "active",
       "supported_platforms": [
         "codex",
@@ -273,8 +298,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/openai/skills/tree/main/skills/.system/skill-installer\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "agent-browser": {
       "id": "agent-browser",
@@ -297,12 +322,17 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/vercel-labs/agent-browser/tree/main/skills/agent-browser",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "agent-browser skill",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:897a728048034c7f626eb5fc6eaacc574b4b15c72db5869f3fe9fa070805b317",
+      "latest_ref": "sha256:b2a1dea7593954d9c46284f54edd9654b7ef443fce4fe67c7a76f3b3a1a2faf3",
       "status": "active",
       "supported_platforms": [
         "agents",
@@ -329,8 +359,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/vercel-labs/agent-browser/tree/main/skills/agent-browser\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "brainstorming": {
       "id": "brainstorming",
@@ -353,12 +383,17 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/jiho00seo-dev/antigravity-awsome-skill/tree/main/skills/brainstorming",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "antigravity / brainstorming",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:7a238df1ebf0656c1da199aafafcc78c42f47bf4e56dd4e007a67afbb10af455",
+      "latest_ref": "sha256:c395c6a19b7df61510da018e9bf4cf4ffb6d65c402345cb47d2ef93a08cf68ac",
       "status": "active",
       "supported_platforms": [
         "agents",
@@ -385,8 +420,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/jiho00seo-dev/antigravity-awsome-skill/tree/main/skills/brainstorming\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "consulting-analysis": {
       "id": "consulting-analysis",
@@ -473,12 +508,18 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/vercel-labs/skills/tree/main/skills/find-skills",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "registry_url": "https://skills.sh/vercel-labs/skills/find-skills",
+        "label": "skills.sh / find-skills",
+        "confidence": "3-低"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:e2f2f737e3795be94573711242341315cd82735b088248ab880fdafbb2010b9a",
+      "latest_ref": "sha256:5df70a7a474aaed217246277e17882e3eb9025077189026dfb028a713b480926",
       "status": "active",
       "supported_platforms": [
         "agents",
@@ -512,8 +553,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/vercel-labs/skills/tree/main/skills/find-skills\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "frontend-design": {
       "id": "frontend-design",
@@ -536,8 +577,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "anthropics / frontend-design",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -568,8 +614,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/anthropics/skills/tree/main/skills/frontend-design\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "industry-research": {
       "id": "industry-research",
@@ -802,8 +848,14 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "local",
+        "url": "",
+        "label": "未知",
+        "review_status": "reviewed",
+        "review_note": "自制skill",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "4-未知",
+        "local_origin": "self-made"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -820,8 +872,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 自制skill"
     },
     "competitive-landscape": {
       "id": "competitive-landscape",
@@ -847,12 +899,17 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/jiho00seo-dev/antigravity-awsome-skill/tree/main/skills/competitive-landscape",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "antigravity / competitive-landscape",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:85f4400e9eafd2bf0b41616cad13bad515bf83b8475d07738db1ab270cdd1b59",
+      "latest_ref": "sha256:60af77f6eeff0ea283a9a252aa5194bf356b8ce86acb862bd6c71bb8262e8b1f",
       "status": "active",
       "supported_platforms": [
         "gemini",
@@ -872,8 +929,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/jiho00seo-dev/antigravity-awsome-skill/tree/main/skills/competitive-landscape\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "find-skills-plus": {
       "id": "find-skills-plus",
@@ -896,8 +953,14 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "local",
+        "url": "",
+        "label": "未知",
+        "review_status": "reviewed",
+        "review_note": "自制skill",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "3-低",
+        "local_origin": "self-made"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -921,8 +984,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 自制skill"
     },
     "market-sizing-analysis": {
       "id": "market-sizing-analysis",
@@ -948,12 +1011,17 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/jiho00seo-dev/antigravity-awsome-skill/tree/main/skills/market-sizing-analysis",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "antigravity / market-sizing-analysis",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:50840b26ce8ac8b144fc11f12cd58ef1843cbc6f1e94f9339698190a69591ea0",
+      "latest_ref": "sha256:a8e56e3d583fefbd423d16c2d8d0bd7e686626603cceed9a581a69f4387816ea",
       "status": "active",
       "supported_platforms": [
         "gemini",
@@ -973,8 +1041,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/jiho00seo-dev/antigravity-awsome-skill/tree/main/skills/market-sizing-analysis\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "ruuliu-kb-operator": {
       "id": "ruuliu-kb-operator",
@@ -997,8 +1065,14 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "local",
+        "url": "",
+        "label": "未知",
+        "review_status": "reviewed",
+        "review_note": "自制skill",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "4-未知",
+        "local_origin": "self-made"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -1022,8 +1096,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 自制skill"
     },
     "clawteam-multi-agent-coordination": {
       "id": "clawteam-multi-agent-coordination",
@@ -1046,12 +1120,17 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/win4r/ClawTeam-OpenClaw",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "win4r/ClawTeam-OpenClaw",
+        "confidence": "2-中"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
-      "latest_ref": "sha256:7d965957d68159d9500ac45cbcb93d9178361fe5f47ee93703e2a38b7067be06",
+      "latest_ref": "sha256:f421155ce38a533473d018ef76835b0ce5cc1e2678e246fa482127564eb11e62",
       "status": "active",
       "supported_platforms": [
         "agents",
@@ -1092,8 +1171,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/win4r/ClawTeam-OpenClaw\nupdate skipped: 来源仓库/路径不含 SKILL.md：https://github.com/win4r/ClawTeam-OpenClaw\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "comate-automation-browser": {
       "id": "comate-automation-browser",
@@ -1494,8 +1573,14 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "local",
+        "url": "",
+        "label": "未知",
+        "review_status": "reviewed",
+        "review_note": "自制skill",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "未知",
+        "local_origin": "self-made"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -1512,8 +1597,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 自制skill"
     },
     "docx-cn": {
       "id": "docx-cn",
@@ -1578,8 +1663,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/openclaw/skills/tree/main/skills/nextfrontierbuilds/elite-longterm-memory",
+        "label": "OpenClaw / elite-longterm-memory",
+        "review_status": "reviewed",
+        "review_note": "使用clawskills版本",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -1596,8 +1686,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 使用clawskills版本"
     },
     "feishu-bitable": {
       "id": "feishu-bitable",
@@ -2009,8 +2099,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/openclaw/skills/tree/main/skills/xejrax/image-ocr",
+        "label": "OpenClaw / image-ocr",
+        "review_status": "reviewed",
+        "review_note": "使用clawskills版本",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2027,8 +2122,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 使用clawskills版本"
     },
     "last30days": {
       "id": "last30days",
@@ -2051,8 +2146,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/jiho00seo-dev/antigravity-awsome-skill/tree/main/skills/last30days",
+        "label": "antigravity / last30days",
+        "review_status": "reviewed",
+        "review_note": "使用候选url版本",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2069,8 +2169,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 使用候选url版本"
     },
     "memory-hygiene": {
       "id": "memory-hygiene",
@@ -2093,8 +2193,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/sundial-org/awesome-openclaw-skills",
+        "label": "awesome-openclaw-skills",
+        "review_status": "reviewed",
+        "review_note": "使用候选url版本",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "低"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2111,8 +2216,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 使用候选url版本"
     },
     "memory-setup": {
       "id": "memory-setup",
@@ -2135,8 +2240,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/openclaw/skills",
+        "label": "openclaw/skills",
+        "review_status": "reviewed",
+        "review_note": "使用候选url版本",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "低"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2153,8 +2263,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 使用候选url版本"
     },
     "morning-briefing": {
       "id": "morning-briefing",
@@ -2177,8 +2287,14 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "local",
+        "url": "",
+        "label": "未知",
+        "review_status": "reviewed",
+        "review_note": "可能是自制skill",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "未知",
+        "local_origin": "self-made"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2195,8 +2311,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 可能是自制skill"
     },
     "nano-pdf": {
       "id": "nano-pdf",
@@ -2219,8 +2335,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "clawhub",
+        "url": "https://clawskills.sh/skills/ps06756-nano-banana-pdf-skill",
+        "label": "ClawHub / nano-banana-pdf-skill",
+        "review_status": "reviewed",
+        "review_note": "使用候选url版本",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "中"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2237,8 +2358,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 使用候选url版本"
     },
     "obsidian": {
       "id": "obsidian",
@@ -2429,8 +2550,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/openclaw/skills/tree/main/skills/blackmcvn/proactive-agent-3-1-0",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "proactive-agent-3-1-0",
+        "confidence": "中"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2447,8 +2573,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/openclaw/skills/tree/main/skills/blackmcvn/proactive-agent-3-1-0\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     },
     "security-auditor": {
       "id": "security-auditor",
@@ -2471,8 +2597,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/jiho00seo-dev/antigravity-awsome-skill/tree/main/skills/security-auditor",
+        "label": "antigravity / security-auditor",
+        "review_status": "reviewed",
+        "review_note": "使用候选url版本",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "confidence": "高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2489,8 +2620,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source note from Excel: 使用候选url版本"
     },
     "smart-ocr": {
       "id": "smart-ocr",
@@ -2683,8 +2814,11 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/xpzouying/xiaohongshu-mcp",
+        "review_status": "reviewed",
+        "review_note": "user verified source selection from source_candidates.xlsx",
+        "reviewed_at": "2026-04-23T14:52:53+08:00"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2701,8 +2835,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T15:31:22+08:00",
+      "notes": "source reviewed: https://github.com/xpzouying/xiaohongshu-mcp\nupdate skipped: 来源仓库/路径不含 SKILL.md：https://github.com/xpzouying/xiaohongshu-mcp\nupdate skipped: 跳过：复核仓库是 MCP 工具仓库，仓库内 SKILL.md 为 post-to-xhs，和本地 xiaohongshu-mcp skill 不一致"
     },
     "xlsx-cn": {
       "id": "xlsx-cn",
@@ -2775,8 +2909,11 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/zhangyueyork/SkillCere",
+        "review_status": "reviewed",
+        "review_note": "user verified source selection from source_candidates.xlsx",
+        "reviewed_at": "2026-04-23T14:52:53+08:00"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2807,8 +2944,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T15:31:22+08:00",
+      "notes": "source reviewed: https://github.com/zhangyueyork/SkillCere\nupdate skipped: 远端 HEAD 与本地一致；本地 skill-index.json 有刚写入的 source 复核信息，避免覆盖本地注册表。\nupdate skipped: 无需更新：远端 HEAD 与本地一致，且本地索引有复核数据"
     },
     "nanobanana-ppt-skills": {
       "id": "nanobanana-ppt-skills",
@@ -2831,8 +2968,13 @@
       ],
       "categories": [],
       "source": {
-        "type": "unknown",
-        "url": ""
+        "type": "github",
+        "url": "https://github.com/op7418/NanoBanana-PPT-Skills",
+        "review_status": "reviewed",
+        "review_note": "已更新",
+        "reviewed_at": "2026-04-23T16:07:34+08:00",
+        "label": "op7418/NanoBanana-PPT-Skills",
+        "confidence": "1-高"
       },
       "latest_version": "unknown",
       "version_strategy": "file_hash",
@@ -2849,8 +2991,8 @@
           "status": "installed"
         }
       },
-      "last_checked": "",
-      "notes": ""
+      "last_checked": "2026-04-23T16:07:34+08:00",
+      "notes": "source reviewed: https://github.com/op7418/NanoBanana-PPT-Skills\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
     }
   },
   "aliases": {},
