@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "",
+  "platform_skill_dirs": {
+    "codex": [
+      {
+        "path": "~/.codex/skills",
+        "role": "target",
+        "write_policy": "read_write"
+      }
+    ],
+    "agents": [
+      {
+        "path": "~/.agents/skills",
+        "role": "target",
+        "write_policy": "read_write"
+      }
+    ],
+    "claude-code": [
+      {
+        "path": "~/.claude/skills",
+        "role": "target",
+        "write_policy": "read_write"
+      }
+    ],
+    "gemini": [
+      {
+        "path": "~/.gemini/skills",
+        "role": "target",
+        "write_policy": "read_write"
+      }
+    ]
+  },
+  "excluded_dirs": []
+}

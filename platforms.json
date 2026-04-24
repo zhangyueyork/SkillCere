@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "updated_at": "2026-04-20T00:00:00+08:00",
+  "platforms": {
+    "trae-codex": {
+      "display_name": "Trae + Codex",
+      "description": "Trae 平台中的 Codex 能力。平台信息仅作为 skill 推荐的辅助上下文。"
+    },
+    "trae": {
+      "display_name": "Trae",
+      "description": "Trae 原生 agent 能力。平台信息仅作为 skill 推荐的辅助上下文。"
+    },
+    "gemini-antigravity": {
+      "display_name": "Gemini @ Antigravity",
+      "description": "Antigravity 平台中的 Gemini 能力。平台信息仅作为 skill 推荐的辅助上下文。",
+      "host_platform": "antigravity"
+    },
+    "claude-code-antigravity": {
+      "display_name": "Claude Code @ Antigravity",
+      "description": "Antigravity 平台中的 Claude Code 能力。平台信息仅作为 skill 推荐的辅助上下文。",
+      "host_platform": "antigravity"
+    },
+    "comate": {
+      "display_name": "Comate",
+      "description": "Comate agent 能力。平台信息仅作为 skill 推荐的辅助上下文。"
+    },
+    "openclaw": {
+      "display_name": "OpenClaw",
+      "description": "OpenClaw agent 能力。平台信息仅作为 skill 推荐的辅助上下文。"
+    }
+  },
+  "directory_roles": {
+    "target": "正式扫描目标，可登记为已安装 skill。",
+    "source_only": "只读发现源，可人工导入。",
+    "system": "工具内置 skill，只记录，不默认修改。",
+    "cache": "缓存目录，不登记为正式安装。",
+    "temp": "临时目录，不登记。",
+    "vendor": "依赖包或源码目录，不登记。",
+    "exclude": "完全排除。"
+  }
+}

@@ -1,0 +1,28 @@
+# Local caches
+.cache/
+.tmp/
+tmp/
+
+# Secrets and local-only config
+.env
+.env.*
+platforms.local.json
+secrets.*
+credentials.*
+*.key
+*.pem
+*.pfx
+
+# OS/editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Runtime output that can be regenerated
+*.log
+recommendations/
+exports/
+__pycache__/
+*.pyc
