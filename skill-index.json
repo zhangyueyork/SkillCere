@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-04-23T16:07:34+08:00",
+  "updated_at": "2026-07-23T11:33:11+08:00",
   "skills": {
     "imagegen": {
       "id": "imagegen",
@@ -48,8 +48,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:1c3860b6eb079badaceaa2a5792fd26f23a258dc8fa2a04d1677d8d9b8022763",
-          "last_seen": "2026-04-22T19:55:02+08:00",
+          "ref": "sha256:613f892ba9259cbfcb44ee74e81587cc7ce288de86ae2f1eab5eacb190e34f58",
+          "last_seen": "2026-07-23T11:33:10+08:00",
           "status": "installed"
         }
       },
@@ -73,7 +73,11 @@
         "needs",
         "up-to-date",
         "official",
-        "documentation"
+        "documentation",
+        "about",
+        "Codex",
+        "itself",
+        "choosing"
       ],
       "categories": [],
       "source": {
@@ -102,8 +106,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:972a098930f8c935812ace80c2b7b814dafacf65e7da3ea2ce2ce034911cd2b4",
-          "last_seen": "2026-04-22T19:55:02+08:00",
+          "ref": "sha256:f9bc031e9bd54a4659379b3fb0c09f0d8f81135d0770982febbe91836ef9ef03",
+          "last_seen": "2026-07-23T11:33:10+08:00",
           "status": "installed"
         }
       },
@@ -156,8 +160,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:d7c5a754c137d2e5e6924f998e35c0c88c4a051a38024e92fae90003caf58e82",
-          "last_seen": "2026-04-22T19:55:02+08:00",
+          "ref": "sha256:40354d99ca66f16a8bd92b0e6b315b4cd773ebcb8a6348a70398a4b787b86213",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -228,13 +232,13 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:2940e08d49e5197453e58a4387d14cb07101b97911c992ef75c8289e0a1734c0",
-          "last_seen": "2026-04-22T19:55:02+08:00",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         },
         "gemini": {
           "version": "unknown",
-          "ref": "sha256:7ffe12d53e7b0df33e7a3bc4c4d7eeafcf855fde0c309fe09b5211bcc5af49e1",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "ref": "sha256:e030e7685e26283b4a76f5202aa3ae8516fb41dde799be5ae8ea6393ec009fe9",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -293,8 +297,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:2d3be2289274cbffb9eb632b25a1038aa7f369df6aaa0964077c77648547e01d",
-          "last_seen": "2026-04-22T19:55:02+08:00",
+          "ref": "sha256:2892d8b2fb11631132118f340aed80ae17e59d5a571fc2c4f4a4a7e73f139d52",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -354,8 +358,8 @@
         },
         "agents": {
           "version": "unknown",
-          "ref": "sha256:897a728048034c7f626eb5fc6eaacc574b4b15c72db5869f3fe9fa070805b317",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "ref": "sha256:b2a1dea7593954d9c46284f54edd9654b7ef443fce4fe67c7a76f3b3a1a2faf3",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -379,7 +383,15 @@
         "components",
         "adding",
         "functionality",
-        "modifying"
+        "modifying",
+        "Turn",
+        "raw",
+        "ideas",
+        "into",
+        "clear",
+        "validated",
+        "designs",
+        "specifications"
       ],
       "categories": [],
       "source": {
@@ -415,8 +427,8 @@
         },
         "agents": {
           "version": "unknown",
-          "ref": "sha256:7a238df1ebf0656c1da199aafafcc78c42f47bf4e56dd4e007a67afbb10af455",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "ref": "sha256:c395c6a19b7df61510da018e9bf4cf4ffb6d65c402345cb47d2ef93a08cf68ac",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -472,7 +484,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:5bc99df7e5f8af5471eaa5d20b85fc46e99895cf3f2642fa9da94108d03ca13e",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -548,8 +560,8 @@
         },
         "agents": {
           "version": "unknown",
-          "ref": "sha256:e2f2f737e3795be94573711242341315cd82735b088248ab880fdafbb2010b9a",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "ref": "sha256:5df70a7a474aaed217246277e17882e3eb9025077189026dfb028a713b480926",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -610,7 +622,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:70044bbc8e4c21d23b8c8b864956aa1515c1c6cb2f9df14148dbb8c4af6187e5",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -666,7 +678,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:dccff7952cc7824556c97e4ca4f5fdaf6bd7112263f5b33d4c37f28a78ec3e21",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -722,7 +734,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:022ab73365a828b67acaaf5829e8e7b3be844e6586f764a1526dd05416721dbf",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -778,7 +790,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:c3f27d6cf18173ba544d3fc4cd3e4a6bd914569cb25f3ba9cc65aaef2c0f8395",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -895,7 +907,11 @@
         "developing",
         "winning",
         "market",
-        "positioning"
+        "positioning",
+        "used",
+        "user",
+        "asks",
+        "analyze"
       ],
       "categories": [],
       "source": {
@@ -918,8 +934,8 @@
       "installed_on": {
         "gemini": {
           "version": "unknown",
-          "ref": "sha256:85f4400e9eafd2bf0b41616cad13bad515bf83b8475d07738db1ab270cdd1b59",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "ref": "sha256:60af77f6eeff0ea283a9a252aa5194bf356b8ce86acb862bd6c71bb8262e8b1f",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -974,7 +990,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:bd62ff780856ac8bcedf0e3447eb78b2378f788ebcb74385a2c7e5bc16df003a",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -1007,7 +1023,11 @@
         "Available",
         "market",
         "sizing",
-        "SAM"
+        "SAM",
+        "used",
+        "user",
+        "asks",
+        "calculate"
       ],
       "categories": [],
       "source": {
@@ -1030,8 +1050,8 @@
       "installed_on": {
         "gemini": {
           "version": "unknown",
-          "ref": "sha256:50840b26ce8ac8b144fc11f12cd58ef1843cbc6f1e94f9339698190a69591ea0",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "ref": "sha256:a8e56e3d583fefbd423d16c2d8d0bd7e686626603cceed9a581a69f4387816ea",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -1086,7 +1106,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:39980a3487d2875d77df13f9b3ba3d0b944e18f2e7e79a7b7786c1406889801a",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -1116,7 +1136,13 @@
         "request",
         "creation",
         "agent",
-        "spawning"
+        "spawning",
+        "framework-agnostic",
+        "CLI",
+        "tool",
+        "coordinating",
+        "provides",
+        "file-based"
       ],
       "categories": [],
       "source": {
@@ -1148,8 +1174,8 @@
         },
         "claude-code": {
           "version": "unknown",
-          "ref": "sha256:7d965957d68159d9500ac45cbcb93d9178361fe5f47ee93703e2a38b7067be06",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "ref": "sha256:f421155ce38a533473d018ef76835b0ce5cc1e2678e246fa482127564eb11e62",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         },
         "trae-codex": {
@@ -1166,8 +1192,8 @@
         },
         "agents": {
           "version": "unknown",
-          "ref": "sha256:421bd7009bafc7a8d09b5999ff65af23e9f32a4d9b6ad486fe165240640b6860",
-          "last_seen": "2026-04-22T19:55:03+08:00",
+          "ref": "sha256:f421155ce38a533473d018ef76835b0ce5cc1e2678e246fa482127564eb11e62",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -2940,7 +2966,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:5181b1afb6ad31ece3625edf591efffaeae6ab6a8058102a1c092a02b4e8492f",
-          "last_seen": "2026-04-22T19:55:02+08:00",
+          "last_seen": "2026-07-23T11:33:11+08:00",
           "status": "installed"
         }
       },
@@ -2993,6 +3019,342 @@
       },
       "last_checked": "2026-04-23T16:07:34+08:00",
       "notes": "source reviewed: https://github.com/op7418/NanoBanana-PPT-Skills\nupdated from reviewed source at 2026-04-23T15:21:33+08:00\nupdated from reviewed source at 2026-04-23T15:31:22+08:00\nsource note from Excel: 已更新"
+    },
+    "codex-away-mode": {
+      "id": "codex-away-mode",
+      "name": "codex-away-mode",
+      "display_name": "Codex Away Mode",
+      "description": "Keep a live Codex turn reachable while the user is away, with Feishu completion notifications, Away Mode checkpoint cards, and short-window Feishu replies that continue the current Codex turn. Use when the user asks for Codex Away Mode, Feishu completion notifications, waiting for Feishu replies before continuing, or remote continuation while away from the computer.",
+      "keywords": [
+        "codex-away-mode",
+        "Keep",
+        "live",
+        "Codex",
+        "turn",
+        "reachable",
+        "while",
+        "user",
+        "away",
+        "Feishu",
+        "completion",
+        "notifications"
+      ],
+      "categories": [],
+      "source": {
+        "type": "unknown",
+        "url": ""
+      },
+      "latest_version": "unknown",
+      "version_strategy": "file_hash",
+      "latest_ref": "sha256:ffef3154166091d76391af35eb3cd0e645b14896f1dc80cd15db4be79df5f5b9",
+      "status": "active",
+      "supported_platforms": [
+        "codex"
+      ],
+      "installed_on": {
+        "codex": {
+          "version": "unknown",
+          "ref": "sha256:ffef3154166091d76391af35eb3cd0e645b14896f1dc80cd15db4be79df5f5b9",
+          "last_seen": "2026-07-23T11:33:10+08:00",
+          "status": "installed"
+        }
+      },
+      "last_checked": "",
+      "notes": ""
+    },
+    "daily-paper-radar": {
+      "id": "daily-paper-radar",
+      "name": "daily-paper-radar",
+      "display_name": "Daily Paper Radar",
+      "description": "Find, screen, deduplicate, and summarize recent academic papers into a daily research brief. Use when Codex needs to monitor new papers, search arXiv/Semantic Scholar/OpenAlex/web sources for a research area, produce a daily paper digest, track topics such as AI agents, large language model architectures, long-context models, reasoning systems, RAG, multimodal LLMs, or prepare paper recommendations with titles, links, key ideas, and reasons to read.",
+      "keywords": [
+        "daily-paper-radar",
+        "Find",
+        "screen",
+        "deduplicate",
+        "summarize",
+        "recent",
+        "academic",
+        "papers",
+        "into",
+        "daily",
+        "research",
+        "brief"
+      ],
+      "categories": [],
+      "source": {
+        "type": "unknown",
+        "url": ""
+      },
+      "latest_version": "unknown",
+      "version_strategy": "file_hash",
+      "latest_ref": "sha256:87d79c58e92dbfe1ecdb21463271a02b851d5c4f25d0e1108d2427d945c33ef1",
+      "status": "active",
+      "supported_platforms": [
+        "codex"
+      ],
+      "installed_on": {
+        "codex": {
+          "version": "unknown",
+          "ref": "sha256:87d79c58e92dbfe1ecdb21463271a02b851d5c4f25d0e1108d2427d945c33ef1",
+          "last_seen": "2026-07-23T11:33:10+08:00",
+          "status": "installed"
+        }
+      },
+      "last_checked": "",
+      "notes": ""
+    },
+    "doc": {
+      "id": "doc",
+      "name": "doc",
+      "display_name": "DOCX Skill",
+      "description": "Use when the task involves reading, creating, or editing `.docx` documents, especially when formatting or layout fidelity matters; prefer `python-docx` plus the bundled `scripts/render_docx.py` for visual checks.",
+      "keywords": [
+        "doc",
+        "task",
+        "involves",
+        "reading",
+        "creating",
+        "editing",
+        "docx",
+        "documents",
+        "especially",
+        "formatting",
+        "layout",
+        "fidelity"
+      ],
+      "categories": [],
+      "source": {
+        "type": "unknown",
+        "url": ""
+      },
+      "latest_version": "unknown",
+      "version_strategy": "file_hash",
+      "latest_ref": "sha256:2dd628afc3f9217d88bba8f61454b964aa25921f55f69e8d4d923b2ab092c54f",
+      "status": "active",
+      "supported_platforms": [
+        "codex"
+      ],
+      "installed_on": {
+        "codex": {
+          "version": "unknown",
+          "ref": "sha256:2dd628afc3f9217d88bba8f61454b964aa25921f55f69e8d4d923b2ab092c54f",
+          "last_seen": "2026-07-23T11:33:10+08:00",
+          "status": "installed"
+        }
+      },
+      "last_checked": "",
+      "notes": ""
+    },
+    "org-research": {
+      "id": "org-research",
+      "name": "org-research",
+      "display_name": "单位调研 Pipeline Skill",
+      "description": "对即将会面的政府单位、企事业单位等机构进行高可靠背景和业务调研。采用 Pipeline + Reviewer + Generator 结构，强制输出候选来源、原子事实、链接审计、事实准入、组织分析和终审结果，用于尽量确保关键事实均有可核查来源链接，便于进一步深入了解和复核，适用于需要可核查来源和质量门禁的单位调研。",
+      "keywords": [
+        "org-research",
+        "对即将会面的政府单位",
+        "企事业单位等机构进行高可靠背景和业务调研",
+        "采用",
+        "Pipeline",
+        "Reviewer",
+        "Generator",
+        "结构",
+        "强制输出候选来源",
+        "原子事实",
+        "链接审计",
+        "事实准入"
+      ],
+      "categories": [],
+      "source": {
+        "type": "unknown",
+        "url": ""
+      },
+      "latest_version": "unknown",
+      "version_strategy": "file_hash",
+      "latest_ref": "sha256:384075b3cfd2d962b930a1ce828e43551e1ac8a657112ed287d2cb50f14ecf5b",
+      "status": "active",
+      "supported_platforms": [
+        "codex"
+      ],
+      "installed_on": {
+        "codex": {
+          "version": "unknown",
+          "ref": "sha256:384075b3cfd2d962b930a1ce828e43551e1ac8a657112ed287d2cb50f14ecf5b",
+          "last_seen": "2026-07-23T11:33:11+08:00",
+          "status": "installed"
+        }
+      },
+      "last_checked": "",
+      "notes": ""
+    },
+    "pdf": {
+      "id": "pdf",
+      "name": "pdf",
+      "display_name": "PDF Skill",
+      "description": "Use when tasks involve reading, creating, or reviewing PDF files where rendering and layout matter; prefer visual checks by rendering pages (Poppler) and use Python tools such as `reportlab`, `pdfplumber`, and `pypdf` for generation and extraction.",
+      "keywords": [
+        "pdf",
+        "tasks",
+        "involve",
+        "reading",
+        "creating",
+        "reviewing",
+        "files",
+        "where",
+        "rendering",
+        "layout",
+        "matter",
+        "prefer"
+      ],
+      "categories": [],
+      "source": {
+        "type": "unknown",
+        "url": ""
+      },
+      "latest_version": "unknown",
+      "version_strategy": "file_hash",
+      "latest_ref": "sha256:724b72c932053fd87133144405b00fbeec30285ee770168328c8f591ec89c134",
+      "status": "active",
+      "supported_platforms": [
+        "codex"
+      ],
+      "installed_on": {
+        "codex": {
+          "version": "unknown",
+          "ref": "sha256:724b72c932053fd87133144405b00fbeec30285ee770168328c8f591ec89c134",
+          "last_seen": "2026-07-23T11:33:11+08:00",
+          "status": "installed"
+        }
+      },
+      "last_checked": "",
+      "notes": ""
+    },
+    "playwright": {
+      "id": "playwright",
+      "name": "playwright",
+      "display_name": "Playwright CLI Skill",
+      "description": "Use when the task requires automating a real browser from the terminal (navigation, form filling, snapshots, screenshots, data extraction, UI-flow debugging) via `playwright-cli` or the bundled wrapper script.",
+      "keywords": [
+        "playwright",
+        "task",
+        "requires",
+        "automating",
+        "real",
+        "browser",
+        "from",
+        "terminal",
+        "navigation",
+        "form",
+        "filling",
+        "snapshots"
+      ],
+      "categories": [],
+      "source": {
+        "type": "unknown",
+        "url": ""
+      },
+      "latest_version": "unknown",
+      "version_strategy": "file_hash",
+      "latest_ref": "sha256:c52cc95125b720cdc3c9829b0294c2752d4ae9b85a5282aa153da8bba929af87",
+      "status": "active",
+      "supported_platforms": [
+        "codex"
+      ],
+      "installed_on": {
+        "codex": {
+          "version": "unknown",
+          "ref": "sha256:c52cc95125b720cdc3c9829b0294c2752d4ae9b85a5282aa153da8bba929af87",
+          "last_seen": "2026-07-23T11:33:11+08:00",
+          "status": "installed"
+        }
+      },
+      "last_checked": "",
+      "notes": ""
+    },
+    "review-agent": {
+      "id": "review-agent",
+      "name": "review-agent",
+      "display_name": "Review Agent",
+      "description": "Perform a read-only, defect-first review of a specified code change and return every actionable finding. Use when another agent delegates review of uncommitted changes, a base-branch diff, a commit, or custom review instructions.",
+      "keywords": [
+        "review-agent",
+        "Perform",
+        "read-only",
+        "defect-first",
+        "review",
+        "specified",
+        "code",
+        "change",
+        "return",
+        "every",
+        "actionable",
+        "finding"
+      ],
+      "categories": [],
+      "source": {
+        "type": "unknown",
+        "url": ""
+      },
+      "latest_version": "unknown",
+      "version_strategy": "file_hash",
+      "latest_ref": "sha256:bb46315f6bc4b7051c05f807d19b1689b20418ac6c42590406d805c10fa2fd1a",
+      "status": "active",
+      "supported_platforms": [
+        "codex"
+      ],
+      "installed_on": {
+        "codex": {
+          "version": "unknown",
+          "ref": "sha256:bb46315f6bc4b7051c05f807d19b1689b20418ac6c42590406d805c10fa2fd1a",
+          "last_seen": "2026-07-23T11:33:11+08:00",
+          "status": "installed"
+        }
+      },
+      "last_checked": "",
+      "notes": ""
+    },
+    "sora": {
+      "id": "sora",
+      "name": "sora",
+      "display_name": "Sora Video Generation Skill",
+      "description": "Use when the user asks to generate, edit, extend, poll, list, download, or delete Sora videos, create reusable non-human Sora character references, or run local multi-video queues via the bundled CLI (`scripts/sora.py`); includes requests like: (i) generate AI video, (ii) edit this Sora clip, (iii) extend this video, (iv) create a character reference, (v) download video/thumbnail/spritesheet, and (vi) Sora batch planning; requires `OPENAI_API_KEY` and Sora API access.",
+      "keywords": [
+        "sora",
+        "user",
+        "asks",
+        "generate",
+        "edit",
+        "extend",
+        "poll",
+        "list",
+        "download",
+        "delete",
+        "videos",
+        "create"
+      ],
+      "categories": [],
+      "source": {
+        "type": "unknown",
+        "url": ""
+      },
+      "latest_version": "unknown",
+      "version_strategy": "file_hash",
+      "latest_ref": "sha256:56ffa5a1c23c4bc7e38adfc2b3b488128cef55da5af12c778c3ec6d2e57ec4f1",
+      "status": "active",
+      "supported_platforms": [
+        "codex"
+      ],
+      "installed_on": {
+        "codex": {
+          "version": "unknown",
+          "ref": "sha256:56ffa5a1c23c4bc7e38adfc2b3b488128cef55da5af12c778c3ec6d2e57ec4f1",
+          "last_seen": "2026-07-23T11:33:11+08:00",
+          "status": "installed"
+        }
+      },
+      "last_checked": "",
+      "notes": ""
     }
   },
   "aliases": {},
