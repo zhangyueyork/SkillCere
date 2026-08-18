@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-07-23T15:11:58+08:00",
+  "updated_at": "2026-08-18T17:50:02+08:00",
   "skills": {
     "imagegen": {
       "id": "imagegen",
@@ -48,8 +48,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:613f892ba9259cbfcb44ee74e81587cc7ce288de86ae2f1eab5eacb190e34f58",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "ref": "sha256:706d4d96e1d5c9e6023fe3ccabba1bb34b364024d344fd25b8515ec7d28fe3c4",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -77,7 +77,11 @@
         "about",
         "Codex",
         "itself",
-        "choosing"
+        "choosing",
+        "models",
+        "pricing",
+        "scheduled",
+        "tasks"
       ],
       "categories": [],
       "source": {
@@ -106,8 +110,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:f9bc031e9bd54a4659379b3fb0c09f0d8f81135d0770982febbe91836ef9ef03",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "ref": "sha256:4371fcc6652d78309ccf5e7710a4fd22314ad7f1f4928a6c172ddae80c87cc87",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -161,7 +165,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:40354d99ca66f16a8bd92b0e6b315b4cd773ebcb8a6348a70398a4b787b86213",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -231,14 +235,14 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:2940e08d49e5197453e58a4387d14cb07101b97911c992ef75c8289e0a1734c0",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "ref": "sha256:cccd291077ec57c6f50ca6529f0f3fb93212da09473effb2fcec808e81b21288",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         },
         "gemini": {
           "version": "unknown",
           "ref": "sha256:e030e7685e26283b4a76f5202aa3ae8516fb41dde799be5ae8ea6393ec009fe9",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -298,7 +302,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:2892d8b2fb11631132118f340aed80ae17e59d5a571fc2c4f4a4a7e73f139d52",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -359,7 +363,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:243eeaa5e9a42bb12d94d6af29a51b2c956546a16b1862282db1e5bd27315f8a",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -428,7 +432,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:c395c6a19b7df61510da018e9bf4cf4ffb6d65c402345cb47d2ef93a08cf68ac",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -484,7 +488,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:5bc99df7e5f8af5471eaa5d20b85fc46e99895cf3f2642fa9da94108d03ca13e",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -561,7 +565,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -630,7 +634,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:35c43b9d10c2388dbb228047ad028c989a14033750812125f351c85aa42c7a4a",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -686,7 +690,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:dccff7952cc7824556c97e4ca4f5fdaf6bd7112263f5b33d4c37f28a78ec3e21",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -742,7 +746,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:022ab73365a828b67acaaf5829e8e7b3be844e6586f764a1526dd05416721dbf",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -798,7 +802,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:c3f27d6cf18173ba544d3fc4cd3e4a6bd914569cb25f3ba9cc65aaef2c0f8395",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -943,7 +947,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:60af77f6eeff0ea283a9a252aa5194bf356b8ce86acb862bd6c71bb8262e8b1f",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -998,7 +1002,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:bd62ff780856ac8bcedf0e3447eb78b2378f788ebcb74385a2c7e5bc16df003a",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -1059,7 +1063,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:a8e56e3d583fefbd423d16c2d8d0bd7e686626603cceed9a581a69f4387816ea",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -1114,7 +1118,7 @@
         "gemini": {
           "version": "unknown",
           "ref": "sha256:39980a3487d2875d77df13f9b3ba3d0b944e18f2e7e79a7b7786c1406889801a",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         },
         "gemini-antigravity": {
@@ -1183,7 +1187,7 @@
         "claude-code": {
           "version": "unknown",
           "ref": "sha256:f421155ce38a533473d018ef76835b0ce5cc1e2678e246fa482127564eb11e62",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         },
         "trae-codex": {
@@ -2968,7 +2972,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:5181b1afb6ad31ece3625edf591efffaeae6ab6a8058102a1c092a02b4e8492f",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -3056,8 +3060,8 @@
       "installed_on": {
         "codex": {
           "version": "unknown",
-          "ref": "sha256:ffef3154166091d76391af35eb3cd0e645b14896f1dc80cd15db4be79df5f5b9",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "ref": "sha256:ed9fa40ef9bd4e0d5bad3b88146aa1e650c5242630efc95c52b264ba961b8438",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -3099,7 +3103,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:87d79c58e92dbfe1ecdb21463271a02b851d5c4f25d0e1108d2427d945c33ef1",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -3141,7 +3145,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:2dd628afc3f9217d88bba8f61454b964aa25921f55f69e8d4d923b2ab092c54f",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -3183,7 +3187,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:384075b3cfd2d962b930a1ce828e43551e1ac8a657112ed287d2cb50f14ecf5b",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -3225,7 +3229,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:724b72c932053fd87133144405b00fbeec30285ee770168328c8f591ec89c134",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -3267,7 +3271,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:c52cc95125b720cdc3c9829b0294c2752d4ae9b85a5282aa153da8bba929af87",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -3309,7 +3313,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:bb46315f6bc4b7051c05f807d19b1689b20418ac6c42590406d805c10fa2fd1a",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -3351,7 +3355,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:56ffa5a1c23c4bc7e38adfc2b3b488128cef55da5af12c778c3ec6d2e57ec4f1",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
@@ -3393,7 +3397,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:12236310397bffb032cbd422b36fab0d217524701154aa4ceab45b848f06e6e7",
-          "last_seen": "2026-07-23T15:11:58+08:00",
+          "last_seen": "2026-08-18T17:50:02+08:00",
           "status": "installed"
         }
       },
