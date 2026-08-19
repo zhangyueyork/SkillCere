@@ -12,6 +12,7 @@ Recommendation role:
 - When the user asks for skill recommendation or explicitly invokes SkillCere, call SkillCere.
 - Refresh and sync the local skill index when needed.
 - Gather the currently available skills and their install status.
+- Discover enabled/installed Codex plugin skills without executing plugin code.
 - Search the reviewed candidate registry when installed skills do not cover the task.
 - Check whether version status is known or unknown.
 - Produce a structured context so the current Agent can decide which skills to use.
@@ -54,6 +55,8 @@ python "<skillcere-root>\scripts\skillcere.py" scan
 ```
 
 `scan` syncs the central index by default. Use `scan --no-sync` only for local tests or when the user explicitly asks not to sync.
+
+The scan reads standalone skill roots plus Codex plugin configuration, remote-install markers, plugin manifests, and plugin `SKILL.md` files. Plugin skills use `plugin-name:skill-name` ids. A plugin record means the plugin is installed/configured; it does not guarantee that Codex included that skill in a particular turn's size-limited initial skill list.
 
 3. Generate SkillCere context:
 
@@ -102,6 +105,8 @@ python "<skillcere-root>\scripts\skillcere.py" scan
 ```powershell
 python "<skillcere-root>\scripts\skillcere.py" scan --no-sync
 ```
+
+Use `scan --no-plugins` only to diagnose standalone skill roots without reading the Codex plugin inventory.
 
 ### Sync central skill index
 
@@ -198,6 +203,7 @@ If a required skill is not installed in the current platform, install it first o
 - Do not save user task text into SkillCere.
 - Do not modify tool skill directories unless the user explicitly asks.
 - Do not treat cache, temp, vendor, or `node_modules` directories as official skill sources.
+- Read Codex plugin cache only through validated `.codex-plugin/plugin.json` manifests for plugins that config or remote-install metadata identifies as installed; never execute or modify cached plugin code.
 - Do not invent source URLs or versions that SkillCere does not know.
 - Do not invent external skill names, source URLs, install commands, or versions that were not returned by `find-skills`.
 - Do not present a `candidate-index.json` record as installed. Recheck its pinned source, license, dependencies, scripts, and platform compatibility before recommending installation.

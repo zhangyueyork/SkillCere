@@ -1,7 +1,23 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-04-20T00:00:00+08:00",
+  "updated_at": "2026-08-19T19:02:35+08:00",
   "platforms": {
+    "codex": {
+      "display_name": "Codex",
+      "description": "Codex 本地、系统及已安装插件提供的 skill。"
+    },
+    "agents": {
+      "display_name": "Agent Skills",
+      "description": "用户级 .agents/skills，可被 Codex 等兼容 Agent 发现。"
+    },
+    "claude-code": {
+      "display_name": "Claude Code",
+      "description": "Claude Code 本地 skill。"
+    },
+    "gemini": {
+      "display_name": "Gemini",
+      "description": "Gemini 本地 skill。"
+    },
     "trae-codex": {
       "display_name": "Trae + Codex",
       "description": "Trae 平台中的 Codex 能力。平台信息仅作为 skill 推荐的辅助上下文。"

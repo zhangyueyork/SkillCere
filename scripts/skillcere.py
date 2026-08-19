@@ -25,6 +25,20 @@ PLATFORMS_FILE = ROOT / "platforms.json"
 LOCAL_PLATFORMS_FILE = ROOT / "platforms.local.json"
 INSTALL_LOG_FILE = ROOT / "install-log.jsonl"
 SKILL_FILE_NAME = "SKILL.md"
+CODEX_CONFIG_FILE = Path.home() / ".codex" / "config.toml"
+CODEX_PLUGIN_CACHE = Path.home() / ".codex" / "plugins" / "cache"
+REMOTE_PLUGIN_MARKER = ".codex-remote-plugin-install.json"
+CATEGORY_RULES = {
+    "browser": ("browser", "chrome", "playwright", "webapp", "screenshot"),
+    "documents": ("docx", "document", "word", "pdf", "ppt", "powerpoint", "presentation", "presentations", "slides", "spreadsheet", "xlsx", "excel"),
+    "design": ("design", "frontend", "figma", "image", "canvas", "theme", "visual", "visualization", "visualizations", "website", "websites", "page-builder"),
+    "research": ("research", "analysis", "market", "competitive", "paper", "audit"),
+    "automation": ("automation", "cron", "schedule", "workflow", "proactive", "evolver", "organizer", "briefing"),
+    "communications": ("feishu", "slack", "messaging", "comms", "newsletter", "briefing"),
+    "knowledge": ("memory", "knowledge", "obsidian", "summarize", "ocr"),
+    "development": ("code", "coding", "developer", "plugin", "skill", "mcp", "release", "security", "subagent"),
+    "media": ("imagegen", "sora", "video", "gif", "cover", "art"),
+}
 DEFAULT_LOCAL_PLATFORMS = {
     "schema_version": "1.0.0",
     "updated_at": "",
@@ -227,6 +241,24 @@ def normalize_id(value: str) -> str:
     return value or "unknown-skill"
 
 
+def infer_categories(*values: Any) -> list[str]:
+    text = " ".join(
+        " ".join(str(item) for item in value) if isinstance(value, (list, tuple, set)) else str(value or "")
+        for value in values
+    ).lower()
+    categories = [
+        category
+        for category, terms in CATEGORY_RULES.items()
+        if any(re.search(rf"(?<![a-z0-9]){re.escape(term)}(?![a-z0-9])", text) for term in terms)
+    ]
+    return categories[:4] or ["general"]
+
+
+def version_key(value: str) -> tuple[int, ...]:
+    numbers = tuple(int(item) for item in re.findall(r"\d+", value or ""))
+    return numbers or (0,)
+
+
 def parse_front_matter(text: str) -> tuple[dict[str, str], str]:
     if not text.startswith("---"):
         return {}, text
@@ -364,13 +396,152 @@ def read_skill(skill_dir: Path) -> dict[str, Any]:
         "display_name": display_name,
         "description": description,
         "keywords": keywords,
-        "categories": [],
+        "categories": infer_categories(name, description),
+        "categories_source": "inferred",
         "source": {"type": "unknown", "url": ""},
         "latest_version": "unknown",
         "version_strategy": "file_hash",
         "latest_ref": file_hash,
         "status": "active",
     }
+
+
+def read_plugin_states(path: Path) -> dict[str, bool]:
+    if not path.exists():
+        return {}
+    states: dict[str, bool] = {}
+    current_plugin = ""
+    for raw_line in path.read_text(encoding="utf-8", errors="replace").splitlines():
+        line = raw_line.strip()
+        section = re.fullmatch(r'\[plugins\."([^"]+)"\]', line)
+        if section:
+            current_plugin = section.group(1)
+            continue
+        if line.startswith("["):
+            current_plugin = ""
+            continue
+        if current_plugin:
+            enabled = re.fullmatch(r"enabled\s*=\s*(true|false)", line, flags=re.IGNORECASE)
+            if enabled:
+                states[current_plugin] = enabled.group(1).lower() == "true"
+    return states
+
+
+def configured_codex_plugins(config_file: Path, cache_root: Path) -> tuple[set[str], set[str]]:
+    configured = read_plugin_states(config_file)
+    enabled = {plugin_id for plugin_id, is_enabled in configured.items() if is_enabled}
+    disabled = {plugin_id for plugin_id, is_enabled in configured.items() if not is_enabled}
+    if cache_root.exists():
+        for marker in cache_root.glob(f"*/*/{REMOTE_PLUGIN_MARKER}"):
+            plugin_id = f"{marker.parent.name}@{marker.parent.parent.name}"
+            if plugin_id not in disabled:
+                enabled.add(plugin_id)
+    return enabled, disabled
+
+
+def resolve_plugin_root(cache_root: Path, plugin_id: str) -> tuple[Path, dict[str, Any]] | None:
+    plugin_name, separator, marketplace = plugin_id.rpartition("@")
+    if not separator:
+        return None
+    plugin_base = cache_root / marketplace / plugin_name
+    if not plugin_base.exists():
+        return None
+
+    versions: list[tuple[tuple[int, ...], Path, dict[str, Any]]] = []
+    seen_roots: set[Path] = set()
+    for candidate in plugin_base.iterdir():
+        if not candidate.is_dir():
+            continue
+        try:
+            resolved = candidate.resolve()
+        except OSError:
+            resolved = candidate
+        if resolved in seen_roots:
+            continue
+        seen_roots.add(resolved)
+        manifest_path = candidate / ".codex-plugin" / "plugin.json"
+        if not manifest_path.exists():
+            continue
+        try:
+            manifest = read_json(manifest_path)
+        except (OSError, json.JSONDecodeError):
+            continue
+        if normalize_id(str(manifest.get("name") or "")) != normalize_id(plugin_name):
+            continue
+        version = str(manifest.get("version") or candidate.name)
+        versions.append((version_key(version), candidate, manifest))
+
+    if not versions:
+        return None
+    _, root, manifest = max(versions, key=lambda item: (item[0], str(item[1])))
+    return root, manifest
+
+
+def discover_codex_plugin_skills(
+    config_file: Path = CODEX_CONFIG_FILE,
+    cache_root: Path = CODEX_PLUGIN_CACHE,
+) -> tuple[list[dict[str, Any]], list[str]]:
+    enabled, _ = configured_codex_plugins(config_file, cache_root)
+    skills: list[dict[str, Any]] = []
+    warnings: list[str] = []
+
+    for plugin_id in sorted(enabled):
+        resolved = resolve_plugin_root(cache_root, plugin_id)
+        if resolved is None:
+            warnings.append(f"Configured plugin not found in cache: {plugin_id}")
+            continue
+        plugin_root, manifest = resolved
+        plugin_name = normalize_id(str(manifest.get("name") or plugin_id.partition("@")[0]))
+        marketplace = plugin_id.partition("@")[2]
+        version = str(manifest.get("version") or "unknown")
+        skills_value = str(manifest.get("skills") or "./skills/")
+        skills_root = plugin_root / skills_value
+        source_url = str(manifest.get("repository") or manifest.get("homepage") or "")
+        license_name = str(manifest.get("license") or "unknown")
+
+        for skill_dir in discover_skill_dirs(skills_root, []):
+            skill = read_skill(skill_dir)
+            original_id = skill["id"]
+            skill["id"] = f"{plugin_name}:{original_id}"
+            skill["display_name"] = f"{plugin_name}: {skill['display_name']}"
+            skill["source"] = {
+                "type": "codex_plugin",
+                "url": source_url,
+                "plugin_id": plugin_id,
+                "marketplace": marketplace,
+                "license": license_name,
+            }
+            skill["latest_version"] = version
+            skill["version_strategy"] = "plugin_manifest"
+            skill["latest_ref"] = f"plugin:{plugin_id}@{version}:{skill['latest_ref']}"
+            skill["categories"] = sorted(set(["plugin", *skill.get("categories", [])]))[:5]
+            skill["categories_source"] = "inferred"
+            skill["install_metadata"] = {
+                "distribution": "plugin",
+                "plugin_id": plugin_id,
+                "plugin_version": version,
+            }
+            skills.append(skill)
+
+    return skills, warnings
+
+
+def backfill_categories(index: dict[str, Any]) -> int:
+    changed = 0
+    for skill in index.get("skills", {}).values():
+        if skill.get("categories_source") == "curated":
+            continue
+        categories = infer_categories(
+            skill.get("name"),
+            skill.get("description"),
+        )
+        if (skill.get("source") or {}).get("type") == "codex_plugin":
+            categories = sorted(set(["plugin", *categories]))[:5]
+        if skill.get("categories") != categories or skill.get("categories_source") != "inferred":
+            skill["categories"] = categories
+            skill["categories_source"] = "inferred"
+            changed += 1
+    return changed
 
 
 def ensure_index_shape(index: dict[str, Any]) -> dict[str, Any]:
@@ -393,11 +564,13 @@ def ensure_candidate_shape(index: dict[str, Any]) -> dict[str, Any]:
 def merge_skill(index: dict[str, Any], skill: dict[str, Any], platform: str) -> str:
     skills = index["skills"]
     skill_id = skill["id"]
+    install_metadata = skill.get("install_metadata") or {"distribution": "local_skill"}
+    skill_record = {key: value for key, value in skill.items() if key != "install_metadata"}
     existing = skills.get(skill_id)
     event_type = "unchanged"
 
     if existing is None:
-        existing = skill | {
+        existing = skill_record | {
             "supported_platforms": [],
             "installed_on": {},
             "last_checked": "",
@@ -412,6 +585,16 @@ def merge_skill(index: dict[str, Any], skill: dict[str, Any], platform: str) -> 
                 existing[key] = skill[key]
         for key in ("source", "latest_version", "version_strategy", "latest_ref", "status"):
             existing.setdefault(key, skill.get(key))
+        incoming_source = skill.get("source") or {}
+        if not (existing.get("source") or {}).get("url") and incoming_source.get("url"):
+            existing["source"] = incoming_source
+            event_type = "updated"
+        if not existing.get("categories") and skill.get("categories"):
+            existing["categories"] = skill["categories"]
+            event_type = "updated"
+        if skill.get("version_strategy") == "plugin_manifest":
+            for key in ("latest_version", "version_strategy", "latest_ref"):
+                existing[key] = skill.get(key)
         existing_keywords = set(existing.get("keywords", []))
         merged_keywords = list(existing.get("keywords", []))
         for keyword in skill.get("keywords", []):
@@ -438,6 +621,7 @@ def merge_skill(index: dict[str, Any], skill: dict[str, Any], platform: str) -> 
         "ref": skill.get("latest_ref", ""),
         "last_seen": now_iso(),
         "status": "installed",
+        **install_metadata,
     }
     return event_type
 
@@ -484,6 +668,9 @@ def command_scan(args: argparse.Namespace) -> int:
     current_by_platform: dict[str, set[str]] = {}
     scanned_platforms: set[str] = set()
     missing_roots: list[str] = []
+    plugin_scanned = 0
+    plugin_inventory_scanned = False
+    plugin_warnings: list[str] = []
 
     for platform, roots in local.get("platform_skill_dirs", {}).items():
         if known_platforms and platform not in known_platforms:
@@ -520,12 +707,46 @@ def command_scan(args: argparse.Namespace) -> int:
                         }
                     )
 
+    if not args.no_plugins and (CODEX_CONFIG_FILE.exists() or CODEX_PLUGIN_CACHE.exists()):
+        plugin_inventory_scanned = True
+        current_by_platform.setdefault("codex", set())
+        scanned_platforms.add("codex")
+        plugin_skills, plugin_warnings = discover_codex_plugin_skills()
+        for skill in plugin_skills:
+            current_by_platform["codex"].add(skill["id"])
+            event_type = merge_skill(index, skill, "codex")
+            scanned += 1
+            plugin_scanned += 1
+            if event_type == "added":
+                added += 1
+            elif event_type in {"updated", "new_platform"}:
+                updated += 1
+            else:
+                unchanged += 1
+            if event_type != "unchanged":
+                append_log(
+                    {
+                        "event": event_type,
+                        "skill_id": skill["id"],
+                        "platform": "codex",
+                        "distribution": "plugin",
+                        "version": skill.get("latest_version", "unknown"),
+                        "ref": skill.get("latest_ref", ""),
+                    }
+                )
+
     stale_platform_refs = 0
     stale_skills = 0
     for skill_id, skill in index["skills"].items():
         installed_on = skill.get("installed_on") or {}
         for platform in list(installed_on.keys()):
             if platform not in scanned_platforms:
+                continue
+            if (
+                platform == "codex"
+                and (installed_on.get(platform) or {}).get("distribution") == "plugin"
+                and not plugin_inventory_scanned
+            ):
                 continue
             if skill_id not in current_by_platform.get(platform, set()):
                 del installed_on[platform]
@@ -546,19 +767,26 @@ def command_scan(args: argparse.Namespace) -> int:
                 append_log({"event": "not_installed", "skill_id": skill_id})
             skill["status"] = "not_installed"
 
+    categories_backfilled = backfill_categories(index)
     index["updated_at"] = now_iso()
     write_json(INDEX_FILE, index)
 
     print(f"Scanned skills: {scanned}")
+    print(f"Scanned Codex plugin skills: {plugin_scanned}")
     print(f"Added skills: {added}")
     print(f"Updated or new platform sightings: {updated}")
     print(f"Unchanged sightings: {unchanged}")
     print(f"Stale platform sightings marked: {stale_platform_refs}")
     print(f"Skills marked not_installed: {stale_skills}")
+    print(f"Categories backfilled: {categories_backfilled}")
     print(f"Total indexed skills: {len(index['skills'])}")
     if missing_roots:
         print("Missing scan roots:")
         for item in missing_roots:
+            print(f"  - {item}")
+    if plugin_warnings:
+        print("Plugin scan warnings:")
+        for item in plugin_warnings:
             print(f"  - {item}")
     if not args.no_sync:
         print()
@@ -576,7 +804,9 @@ def command_status(_: argparse.Namespace) -> int:
     platform_counts: dict[str, int] = {}
     missing_source = 0
     unknown_version = 0
+    missing_categories = 0
     not_installed = 0
+    plugin_skills = 0
 
     for skill in skills.values():
         source = skill.get("source") or {}
@@ -584,8 +814,16 @@ def command_status(_: argparse.Namespace) -> int:
             missing_source += 1
         if skill.get("latest_version") in {"", None, "unknown"}:
             unknown_version += 1
+        if not skill.get("categories"):
+            missing_categories += 1
         if skill.get("status") == "not_installed" or not (skill.get("installed_on") or {}):
             not_installed += 1
+        if any(
+            details.get("distribution") == "plugin"
+            for details in (skill.get("installed_on") or {}).values()
+            if isinstance(details, dict)
+        ):
+            plugin_skills += 1
         for platform in (skill.get("installed_on") or {}).keys():
             platform_counts[platform] = platform_counts.get(platform, 0) + 1
 
@@ -595,6 +833,8 @@ def command_status(_: argparse.Namespace) -> int:
     print(f"  Not installed skills: {not_installed}")
     print(f"  Missing source URL: {missing_source}")
     print(f"  Unknown version: {unknown_version}")
+    print(f"  Missing categories: {missing_categories}")
+    print(f"  Codex plugin skills: {plugin_skills}")
     print(f"  Candidate skills: {len(candidate_index['candidates'])}")
     candidate_counts: dict[str, int] = {}
     for candidate in candidate_index["candidates"].values():
@@ -670,6 +910,13 @@ def compact_skill_catalog(index: dict[str, Any], max_skills: int) -> list[dict[s
                 "keywords": skill.get("keywords", [])[:12],
                 "categories": skill.get("categories", [])[:8],
                 "installed_on": installed_on,
+                "distributions": sorted(
+                    {
+                        details.get("distribution", "unknown")
+                        for details in (skill.get("installed_on") or {}).values()
+                        if isinstance(details, dict)
+                    }
+                ),
                 "version": skill.get("latest_version", "unknown"),
                 "source_url_available": bool((skill.get("source") or {}).get("url")),
             }
@@ -980,6 +1227,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     scan = subcommands.add_parser("scan", help="Scan local skill directories into the central index.")
     scan.add_argument("--no-sync", action="store_true", help="Do not sync the central index after scanning.")
+    scan.add_argument("--no-plugins", action="store_true", help="Skip Codex plugin discovery.")
     scan.set_defaults(func=command_scan)
 
     status = subcommands.add_parser("status", help="Show central index status.")

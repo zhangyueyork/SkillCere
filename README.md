@@ -17,6 +17,7 @@ SkillCere 是小脑，负责整理 skill 清单、版本和安装状态，让 Ag
 
 ```text
 扫描现有 skill
+识别独立 skill 与已安装的 Codex 插件 skill
 建立中央索引
 发现新安装 skill 并登记
 按需提供推荐所需的 skill 上下文
@@ -97,6 +98,10 @@ platforms.json
 ```powershell
 python .\scripts\skillcere.py scan --no-sync
 ```
+
+扫描默认读取 Codex 插件配置、远程安装标记和插件 manifest，并使用 `plugin-name:skill-name` 避免重名。它不会执行或修改插件代码。仅排查独立 skill 时可加 `--no-plugins`。
+
+插件在索引中标记为 `distribution=plugin`。这代表插件已安装或启用，不保证该技能一定进入某一轮受上下文预算限制的初始 Skill 清单。
 
 查看中央索引状态：
 
