@@ -20,6 +20,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX_FILE = ROOT / "skill-index.json"
+CANDIDATE_FILE = ROOT / "candidate-index.json"
 PLATFORMS_FILE = ROOT / "platforms.json"
 LOCAL_PLATFORMS_FILE = ROOT / "platforms.local.json"
 INSTALL_LOG_FILE = ROOT / "install-log.jsonl"
@@ -61,6 +62,7 @@ DEFAULT_LOCAL_PLATFORMS = {
 }
 SYNC_FILES = [
     INDEX_FILE,
+    CANDIDATE_FILE,
     INSTALL_LOG_FILE,
     ROOT / "version-cache.json",
     PLATFORMS_FILE,
@@ -97,6 +99,16 @@ def ensure_project_files() -> None:
                 "skills": {},
                 "aliases": {},
                 "tags": {},
+            },
+        )
+    if not CANDIDATE_FILE.exists():
+        write_json(
+            CANDIDATE_FILE,
+            {
+                "schema_version": "1.0.0",
+                "updated_at": now_iso(),
+                "sources": {},
+                "candidates": {},
             },
         )
     if not PLATFORMS_FILE.exists():
@@ -370,6 +382,14 @@ def ensure_index_shape(index: dict[str, Any]) -> dict[str, Any]:
     return index
 
 
+def ensure_candidate_shape(index: dict[str, Any]) -> dict[str, Any]:
+    index.setdefault("schema_version", "1.0.0")
+    index.setdefault("updated_at", now_iso())
+    index.setdefault("sources", {})
+    index.setdefault("candidates", {})
+    return index
+
+
 def merge_skill(index: dict[str, Any], skill: dict[str, Any], platform: str) -> str:
     skills = index["skills"]
     skill_id = skill["id"]
@@ -551,6 +571,7 @@ def command_scan(args: argparse.Namespace) -> int:
 def command_status(_: argparse.Namespace) -> int:
     ensure_project_files()
     index = ensure_index_shape(read_json(INDEX_FILE))
+    candidate_index = ensure_candidate_shape(read_json(CANDIDATE_FILE))
     skills = index["skills"]
     platform_counts: dict[str, int] = {}
     missing_source = 0
@@ -574,6 +595,15 @@ def command_status(_: argparse.Namespace) -> int:
     print(f"  Not installed skills: {not_installed}")
     print(f"  Missing source URL: {missing_source}")
     print(f"  Unknown version: {unknown_version}")
+    print(f"  Candidate skills: {len(candidate_index['candidates'])}")
+    candidate_counts: dict[str, int] = {}
+    for candidate in candidate_index["candidates"].values():
+        status = str(candidate.get("status") or "unknown")
+        candidate_counts[status] = candidate_counts.get(status, 0) + 1
+    if candidate_counts:
+        print("  Candidates by status:")
+        for status, count in sorted(candidate_counts.items()):
+            print(f"    {status}: {count}")
     print("  Installed by platform:")
     if platform_counts:
         for platform, count in sorted(platform_counts.items()):
@@ -649,8 +679,50 @@ def compact_skill_catalog(index: dict[str, Any], max_skills: int) -> list[dict[s
     return catalog
 
 
-def build_agent_context(task: str, index: dict[str, Any], max_skills: int) -> str:
+def compact_candidate_catalog(index: dict[str, Any], max_candidates: int) -> list[dict[str, Any]]:
+    catalog: list[dict[str, Any]] = []
+    priority = {"ready": 0, "shortlisted": 1, "watchlist": 2}
+    items = [
+        (candidate_id, candidate)
+        for candidate_id, candidate in index.get("candidates", {}).items()
+        if candidate.get("status") in priority
+    ]
+    items.sort(key=lambda item: (priority[item[1]["status"]], item[0]))
+    for candidate_id, candidate in items[:max_candidates]:
+        source = index.get("sources", {}).get(candidate.get("source_id"), {})
+        catalog.append(
+            {
+                "id": candidate_id,
+                "name": candidate.get("name", candidate_id),
+                "description": compact_text(str(candidate.get("description") or ""), 260),
+                "triggers": candidate.get("triggers", [])[:8],
+                "categories": candidate.get("categories", [])[:8],
+                "status": candidate.get("status", "watchlist"),
+                "incremental_value": candidate.get("incremental_value", "unknown"),
+                "overlap": candidate.get("overlap", [])[:8],
+                "compatibility": candidate.get("compatibility", "unknown"),
+                "dependencies": candidate.get("dependencies", [])[:8],
+                "license": candidate.get("license", "unknown"),
+                "risks": candidate.get("risks", [])[:8],
+                "verdict": compact_text(str(candidate.get("verdict") or ""), 260),
+                "source_url": source.get("url", ""),
+                "source_ref": source.get("pinned_ref", ""),
+                "source_path": candidate.get("path", ""),
+                "last_checked": candidate.get("last_checked", ""),
+            }
+        )
+    return catalog
+
+
+def build_agent_context(
+    task: str,
+    index: dict[str, Any],
+    candidate_index: dict[str, Any],
+    max_skills: int,
+    max_candidates: int,
+) -> str:
     catalog = compact_skill_catalog(index, max_skills)
+    candidate_catalog = compact_candidate_catalog(candidate_index, max_candidates)
     return (
         "【SkillCere 推荐上下文】\n\n"
         "你是当前 Agent。SkillCere Core 只负责提供 skill 清单上下文，最终 skill 推荐应由你基于任务需求完成。\n\n"
@@ -658,8 +730,8 @@ def build_agent_context(task: str, index: dict[str, Any], max_skills: int) -> st
         "1. 主要推荐 skill，不要把平台选择作为主任务。\n"
         "2. 平台信息只用于说明 skill 已安装在哪里，或是否需要安装；推荐每个已索引 skill 时必须逐项列出 installed_on 中的具体平台。\n"
         "3. 不要保存、复述或扩展用户隐私信息。\n"
-        "4. 优先从 Skill 目录 JSON 推荐已索引/已安装 skill；如果本地索引不足以覆盖任务，应再使用 find-skills 能力发现外部候选 skill。\n"
-        "5. 外部候选 skill 必须单独列出，不要说成已安装；只有 Skill 目录 JSON 中 installed_on 非空的 skill 才能标为已安装。\n"
+        "4. 先匹配 Skill 目录 JSON；不足时匹配候选目录 JSON；两者仍不足才使用 find-skills 发现新来源。\n"
+        "5. 候选目录中的 skill 必须单独列出，不要说成已安装；使用前重新核对固定提交、许可、依赖、脚本和当前平台兼容性。\n"
         "6. 推荐数量以 1-5 个已索引 skill 为宜，外部候选也应宁缺毋滥。\n"
         "7. 对 source_url_available=false 或 version=unknown 的 skill，要说明目前无法确认远程最新版本，只能按本地 hash/状态追踪。\n"
         "8. 不要编造 find-skills 未返回的外部 skill 名称、安装命令、来源 URL 或版本。\n\n"
@@ -667,17 +739,20 @@ def build_agent_context(task: str, index: dict[str, Any], max_skills: int) -> st
         "【推荐使用的 Skill】\n"
         "- skill-id：推荐理由；适用环节；安装平台：逐项列出 installed_on，若为空则写“当前索引未记录安装平台”\n\n"
         "【外部候选 Skill】\n"
-        "- skill-id/name：推荐理由；适用环节；安装/来源提示；明确标注“外部候选，尚未在 SkillCere 索引中确认安装”\n"
-        "- 如果未调用 find-skills 或没有合适外部候选，可写“未发现需要补充的外部候选”。\n\n"
+        "- skill-id/name：推荐理由；适用环节；候选状态；固定来源提示；明确标注“候选，尚未安装”。\n"
+        "- 优先使用候选目录中已复核的事实；find-skills 新发现的候选必须另行标注为未复核。\n"
+        "- 如果候选目录和 find-skills 都没有合适结果，可写“未发现需要补充的外部候选”。\n\n"
         "【版本检查结果】\n"
-        "- skill-id：版本状态，是否需要人工确认；外部候选仅使用 find-skills 返回的版本/来源信息\n\n"
+        "- skill-id：版本状态，是否需要人工确认；候选仅使用候选目录或 find-skills 提供的版本/来源信息。\n\n"
         "【安装/更新建议】\n"
         "- 说明当前平台是否可能需要安装这些 skill；外部候选需要先安装；不要给出不存在的下载地址\n\n"
         "【给执行 Agent 的启动说明】\n"
         "一段可以直接复制给执行 Agent 的说明，包含“使用哪些 skill 完成什么需求、执行顺序、缺失 skill 时如何处理”。\n\n"
         f"用户需求：\n{task}\n\n"
         "Skill 目录 JSON：\n"
-        f"{json.dumps(catalog, ensure_ascii=False, indent=2)}\n"
+        f"{json.dumps(catalog, ensure_ascii=False, indent=2)}\n\n"
+        "候选目录 JSON：\n"
+        f"{json.dumps(candidate_catalog, ensure_ascii=False, indent=2)}\n"
     )
 
 
@@ -689,7 +764,8 @@ def command_context(args: argparse.Namespace) -> int:
 
     ensure_project_files()
     index = ensure_index_shape(read_json(INDEX_FILE))
-    print(build_agent_context(query, index, args.max_skills))
+    candidate_index = ensure_candidate_shape(read_json(CANDIDATE_FILE))
+    print(build_agent_context(query, index, candidate_index, args.max_skills, args.max_candidates))
     return 0
 
 
@@ -705,6 +781,43 @@ def command_sync(args: argparse.Namespace) -> int:
         dry_run=args.dry_run,
         push=not args.no_push,
     )
+
+
+def command_candidates(args: argparse.Namespace) -> int:
+    ensure_project_files()
+    index = ensure_candidate_shape(read_json(CANDIDATE_FILE))
+    query = (args.query or "").strip().lower()
+    rows: list[dict[str, Any]] = []
+    for candidate_id, candidate in index["candidates"].items():
+        if args.status and candidate.get("status") != args.status:
+            continue
+        if args.source and candidate.get("source_id") != args.source:
+            continue
+        searchable = " ".join(
+            [
+                candidate_id,
+                str(candidate.get("name") or ""),
+                str(candidate.get("description") or ""),
+                " ".join(candidate.get("triggers", []) or []),
+                " ".join(candidate.get("categories", []) or []),
+            ]
+        ).lower()
+        if query and query not in searchable:
+            continue
+        rows.append({"id": candidate_id, **candidate})
+
+    rows.sort(key=lambda row: (str(row.get("status") or ""), row["id"]))
+    if args.json:
+        print(json.dumps(rows, ensure_ascii=False, indent=2))
+        return 0
+
+    print(f"Candidate skills: {len(rows)}")
+    for row in rows:
+        value = row.get("incremental_value", "unknown")
+        print(f"  - {row['id']} [{row.get('status', 'unknown')}; value={value}]")
+        if row.get("verdict"):
+            print(f"    {compact_text(str(row['verdict']), 180)}")
+    return 0
 
 
 def command_export_excel(args: argparse.Namespace) -> int:
@@ -879,11 +992,13 @@ def build_parser() -> argparse.ArgumentParser:
     context = subcommands.add_parser("context", help="Generate skill recommendation context for an Agent.")
     context.add_argument("task", nargs="+", help="Task description.")
     context.add_argument("--max-skills", type=int, default=300, help="Maximum number of indexed skills to include.")
+    context.add_argument("--max-candidates", type=int, default=100, help="Maximum number of candidates to include.")
     context.set_defaults(func=command_context)
 
     recommend = subcommands.add_parser("recommend", help="Alias of context.")
     recommend.add_argument("task", nargs="+", help="Task description.")
     recommend.add_argument("--max-skills", type=int, default=300, help="Maximum number of indexed skills to include.")
+    recommend.add_argument("--max-candidates", type=int, default=100, help="Maximum number of candidates to include.")
     recommend.set_defaults(func=command_recommend)
 
     sync = subcommands.add_parser("sync", help="Commit and push central skill index files.")
@@ -891,6 +1006,13 @@ def build_parser() -> argparse.ArgumentParser:
     sync.add_argument("--dry-run", action="store_true", help="Show syncable changes without committing.")
     sync.add_argument("--no-push", action="store_true", help="Commit locally but do not push.")
     sync.set_defaults(func=command_sync)
+
+    candidates = subcommands.add_parser("candidates", help="List and filter the candidate skill registry.")
+    candidates.add_argument("--query", help="Case-insensitive text filter.")
+    candidates.add_argument("--status", choices=["watchlist", "shortlisted", "ready", "rejected", "promoted"])
+    candidates.add_argument("--source", help="Filter by source id.")
+    candidates.add_argument("--json", action="store_true", help="Print matching records as JSON.")
+    candidates.set_defaults(func=command_candidates)
 
     export_excel = subcommands.add_parser("export-excel", help="Export the central index to an Excel workbook.")
     export_excel.add_argument("--output", help="Output .xlsx path.")

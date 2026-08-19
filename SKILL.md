@@ -12,6 +12,7 @@ Recommendation role:
 - When the user asks for skill recommendation or explicitly invokes SkillCere, call SkillCere.
 - Refresh and sync the local skill index when needed.
 - Gather the currently available skills and their install status.
+- Search the reviewed candidate registry when installed skills do not cover the task.
 - Check whether version status is known or unknown.
 - Produce a structured context so the current Agent can decide which skills to use.
 - Generate a startup instruction for a future executing Agent.
@@ -59,6 +60,13 @@ python "<skillcere-root>\scripts\skillcere.py" scan
 ```powershell
 python "<skillcere-root>\scripts\skillcere.py" context "<user task>"
 ```
+
+The context contains two separate catalogs:
+
+- installed/indexed skills from `skill-index.json`;
+- reviewed but not installed candidates from `candidate-index.json`.
+
+Candidate records are metadata only. They do not mean that third-party skill files or scripts are installed, trusted, or ready to execute.
 
 4. Read the returned context carefully.
 5. Use external skill discovery when useful:
@@ -113,6 +121,14 @@ python "<skillcere-root>\scripts\skillcere.py" sync --dry-run
 python "<skillcere-root>\scripts\skillcere.py" status
 ```
 
+### List candidate skills
+
+```powershell
+python "<skillcere-root>\scripts\skillcere.py" candidates
+python "<skillcere-root>\scripts\skillcere.py" candidates --query "obsidian"
+python "<skillcere-root>\scripts\skillcere.py" candidates --status shortlisted
+```
+
 ### Export Excel
 
 ```powershell
@@ -144,10 +160,11 @@ After reading SkillCere context, produce:
 
 ### 2. External candidate skills
 
-- Skill id/name from `find-skills`
+- Skill id/name from `candidate-index.json` or `find-skills`
 - Why it may help
-- Install command or source only when provided by `find-skills`
-- Clear note that it is external/not installed when it is not present in SkillCere context
+- Candidate status and pinned source when present in `candidate-index.json`
+- Install command or source only when provided by the registry or `find-skills`
+- Clear note that a candidate is not installed
 
 Omit this section only when external discovery was not needed or found no useful candidates.
 
@@ -183,6 +200,7 @@ If a required skill is not installed in the current platform, install it first o
 - Do not treat cache, temp, vendor, or `node_modules` directories as official skill sources.
 - Do not invent source URLs or versions that SkillCere does not know.
 - Do not invent external skill names, source URLs, install commands, or versions that were not returned by `find-skills`.
+- Do not present a `candidate-index.json` record as installed. Recheck its pinned source, license, dependencies, scripts, and platform compatibility before recommending installation.
 - Always report exact installed platforms for recommended indexed skills using the `installed_on` field.
 - Treat platform hints as secondary. The primary output is the recommended skill set.
 - Only sync central registry files. Do not sync `platforms.local.json`, Excel exports, user tasks, or unrelated code changes.

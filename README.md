@@ -43,6 +43,7 @@ SkillCere/
 ├── scripts/
 │   └── skillcere.py          # skill 辅助脚本和 CLI
 ├── skill-index.json          # 中央 skill 索引
+├── candidate-index.json      # 已复核但尚未安装的候选 skill
 ├── platforms.json            # 平台标识配置，不含本机真实路径
 ├── platforms.local.json      # 本机扫描路径，默认不提交
 ├── install-log.jsonl         # 发现、安装、更新记录
@@ -61,6 +62,7 @@ SkillCere/
 python .\scripts\skillcere.py scan
 python .\scripts\skillcere.py status
 python .\scripts\skillcere.py context "用户需求"
+python .\scripts\skillcere.py candidates --query "关键词"
 python .\scripts\skillcere.py sync
 ```
 
@@ -82,6 +84,7 @@ python .\scripts\skillcere.py scan
 
 ```text
 skill-index.json
+candidate-index.json
 install-log.jsonl
 version-cache.json
 platforms.json
@@ -107,7 +110,15 @@ python .\scripts\skillcere.py status
 python .\scripts\skillcere.py context "帮我做一个高质量前端页面，并用浏览器截图验证效果"
 ```
 
-`context` 不调用任何模型 API，也不需要 API key。它只输出 skill 清单上下文和推荐指令，由当前 Agent 使用自己的模型能力完成最终推荐。
+`context` 不调用任何模型 API，也不需要 API key。它同时输出已安装 skill 清单和已复核候选清单，由当前 Agent 使用自己的模型能力完成最终推荐。候选记录只是元数据，不代表已安装或可以直接执行。
+
+查询候选库：
+
+```powershell
+python .\scripts\skillcere.py candidates
+python .\scripts\skillcere.py candidates --status shortlisted
+python .\scripts\skillcere.py candidates --source kepano-obsidian-skills --json
+```
 
 `recommend` 暂时保留为 `context` 的别名。
 
