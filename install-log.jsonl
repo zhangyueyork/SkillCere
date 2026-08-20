@@ -903,3 +903,5 @@
 {"created_at": "2026-08-19T19:02:35+08:00", "event": "added", "skill_id": "template-creator:template-creator", "platform": "codex", "distribution": "plugin", "version": "26.727.11326", "ref": "plugin:template-creator@openai-primary-runtime@26.727.11326:sha256:894e7bd9ae5f5de28aa140ef684e4b9514e9eadfb1ec0cceed6a5d0c494d7581"}
 {"created_at": "2026-08-19T19:02:35+08:00", "event": "added", "skill_id": "visualize:visualize", "platform": "codex", "distribution": "plugin", "version": "1.0.21", "ref": "plugin:visualize@openai-bundled@1.0.21:sha256:0473e7923fe92b279929f165fcc935bea92dacd58b712d9d6928d22079883318"}
 {"created_at": "2026-08-19T19:05:40+08:00", "event": "updated", "skill_id": "skillcere", "platform": "codex", "version": "unknown", "ref": "sha256:8ef9497f3ce76848753e0c2ece0a3353c7ef5c727ca2822ed267767b39b04ea6"}
+{"created_at": "2026-08-20T16:26:41+08:00", "event": "not_seen", "skill_id": "daily-paper-radar", "platform": "codex"}
+{"created_at": "2026-08-20T16:26:41+08:00", "event": "not_installed", "skill_id": "daily-paper-radar"}
