@@ -1,6 +1,6 @@
 {
-  "schema_version": "1.1.0",
-  "updated_at": "2026-08-25T11:14:17+08:00",
+  "schema_version": "1.2.0",
+  "updated_at": "2026-08-25T20:04:10+08:00",
   "entries": {
     "skill:org-research": {
       "id": "skill:org-research",
@@ -29,13 +29,14 @@
     },
     "skill:pdf": {
       "id": "skill:pdf",
-      "checked_at": "2026-08-25T11:14:15+08:00",
+      "checked_at": "2026-08-25T15:06:49+08:00",
       "installed_version": "unknown",
       "remote_version": "unknown",
       "remote_ref": "sha256:d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2",
       "evidence_url": "https://raw.githubusercontent.com/openai/skills/main/skills/.curated/pdf/SKILL.md",
-      "status": "update_available",
-      "detail": "远端 SKILL.md 与本机索引指纹不同。",
+      "status": "current",
+      "detail": "远端 SKILL.md 与本机索引指纹一致。",
+      "local_state_ref": "sha256-state:7628312306c65c77e2f72a0b39e65d175e00c58240a4dc16e268b2b115d77768",
       "item_id": "pdf",
       "kind": "skill",
       "source_url": "https://github.com/openai/skills/tree/main/skills/.curated/pdf"
@@ -104,15 +105,17 @@
     },
     "skill:agent-browser": {
       "id": "skill:agent-browser",
-      "checked_at": "2026-08-21T18:07:52+08:00",
+      "checked_at": "2026-08-25T20:04:01+08:00",
       "installed_version": "unknown",
       "remote_version": "unknown",
-      "remote_ref": "sha256:243eeaa5e9a42bb12d94d6af29a51b2c956546a16b1862282db1e5bd27315f8a",
+      "remote_ref": "sha256:3a7520e64de2dfaa516b6721c001e84e06e3c06a187b82af029ae721540ebfac",
       "evidence_url": "https://raw.githubusercontent.com/vercel-labs/agent-browser/main/skills/agent-browser/SKILL.md",
-      "status": "current",
-      "detail": "远端 SKILL.md 与本机索引指纹一致。",
+      "status": "content_changed",
+      "detail": "远端与本机 SKILL.md 内容不同；无法仅凭文件差异判断哪一方更新。",
+      "local_state_ref": "sha256-state:f1f2c5fa8377297d090eb94673f1c9f6b9c5ba7a6ced745de6849be0dbc89db9",
       "item_id": "agent-browser",
-      "kind": "skill"
+      "kind": "skill",
+      "source_url": "https://github.com/vercel-labs/agent-browser/tree/main/skills/agent-browser"
     },
     "skill:audit-skills": {
       "id": "skill:audit-skills",
@@ -128,25 +131,28 @@
     },
     "skill:brainstorming": {
       "id": "skill:brainstorming",
-      "checked_at": "2026-08-21T18:07:53+08:00",
+      "checked_at": "2026-08-25T20:04:02+08:00",
       "installed_version": "unknown",
       "remote_version": "unknown",
       "remote_ref": "sha256:e105b7d3df391459adf593e586676408c97eeda0c2e7eb1982ca3a30d19d89bf",
       "evidence_url": "https://raw.githubusercontent.com/jiho00seo-dev/antigravity-awsome-skill/main/skills/brainstorming/SKILL.md",
-      "status": "update_available",
-      "detail": "远端 SKILL.md 与本机索引指纹不同。",
+      "status": "current",
+      "detail": "远端 SKILL.md 与本机索引指纹一致。",
+      "local_state_ref": "sha256-state:0fd92374bbf2e68a6290a408bb245f5ce911adfc957d9a1cb26640c31338e5f6",
       "item_id": "brainstorming",
-      "kind": "skill"
+      "kind": "skill",
+      "source_url": "https://github.com/jiho00seo-dev/antigravity-awsome-skill/tree/main/skills/brainstorming"
     },
     "skill:clawteam": {
       "id": "skill:clawteam",
-      "checked_at": "2026-08-24T16:20:26+08:00",
+      "checked_at": "2026-08-25T20:04:03+08:00",
       "installed_version": "unknown",
       "remote_version": "unknown",
       "remote_ref": "",
       "evidence_url": "https://github.com/hkuds/clawteam",
       "status": "check_failed",
       "detail": "GitHub 返回 HTTP 403。",
+      "local_state_ref": "sha256-state:489285781c5abd79c7f41bd658a2dbbaa76d7eb020508a42cfea9cd3ea9c8d3f",
       "item_id": "clawteam",
       "kind": "skill",
       "source_url": "https://github.com/hkuds/clawteam"
@@ -189,15 +195,17 @@
     },
     "skill:consulting-analysis": {
       "id": "skill:consulting-analysis",
-      "checked_at": "2026-08-21T18:07:58+08:00",
+      "checked_at": "2026-08-25T20:04:05+08:00",
       "installed_version": "unknown",
       "remote_version": "unknown",
       "remote_ref": "sha256:5bc99df7e5f8af5471eaa5d20b85fc46e99895cf3f2642fa9da94108d03ca13e",
       "evidence_url": "https://raw.githubusercontent.com/bytedance/deer-flow/main/skills/public/consulting-analysis/SKILL.md",
       "status": "current",
       "detail": "远端 SKILL.md 与本机索引指纹一致。",
+      "local_state_ref": "sha256-state:e33d7f9c0937cb06700cdd8be516554f448906418b83aec1c5fca18096153332",
       "item_id": "consulting-analysis",
-      "kind": "skill"
+      "kind": "skill",
+      "source_url": "https://github.com/bytedance/deer-flow/tree/main/skills/public/consulting-analysis"
     },
     "skill:create-rule": {
       "id": "skill:create-rule",
@@ -417,15 +425,17 @@
     },
     "skill:find-skills": {
       "id": "skill:find-skills",
-      "checked_at": "2026-08-21T18:07:59+08:00",
+      "checked_at": "2026-08-25T20:04:06+08:00",
       "installed_version": "unknown",
       "remote_version": "unknown",
       "remote_ref": "sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
       "evidence_url": "https://raw.githubusercontent.com/vercel-labs/skills/main/skills/find-skills/SKILL.md",
       "status": "current",
       "detail": "远端 SKILL.md 与本机索引指纹一致。",
+      "local_state_ref": "sha256-state:eedb9662a9c98a3211322b237f99313a299538be39e726795837aed781a98a8f",
       "item_id": "find-skills",
-      "kind": "skill"
+      "kind": "skill",
+      "source_url": "https://github.com/vercel-labs/skills/tree/main/skills/find-skills"
     },
     "skill:find-skills-plus": {
       "id": "skill:find-skills-plus",
@@ -441,15 +451,17 @@
     },
     "skill:frontend-design": {
       "id": "skill:frontend-design",
-      "checked_at": "2026-08-21T18:08:00+08:00",
+      "checked_at": "2026-08-25T20:04:06+08:00",
       "installed_version": "unknown",
       "remote_version": "unknown",
       "remote_ref": "sha256:1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd",
       "evidence_url": "https://raw.githubusercontent.com/anthropics/skills/main/skills/frontend-design/SKILL.md",
-      "status": "update_available",
-      "detail": "远端 SKILL.md 与本机索引指纹不同。",
+      "status": "current",
+      "detail": "远端 SKILL.md 与本机索引指纹一致。",
+      "local_state_ref": "sha256-state:1814aaf187a58cbc0b0b8a3a7d515153eeff6bfdbee401ffa594ff572171bf92",
       "item_id": "frontend-design",
-      "kind": "skill"
+      "kind": "skill",
+      "source_url": "https://github.com/anthropics/skills/tree/main/skills/frontend-design"
     },
     "skill:image-ocr": {
       "id": "skill:image-ocr",
@@ -465,13 +477,14 @@
     },
     "skill:industry-research": {
       "id": "skill:industry-research",
-      "checked_at": "2026-08-24T16:20:28+08:00",
+      "checked_at": "2026-08-25T20:04:06+08:00",
       "installed_version": "unknown",
       "remote_version": "unknown",
       "remote_ref": "",
       "evidence_url": "https://github.com/rkreddyp/investrecipes",
       "status": "check_failed",
       "detail": "GitHub 返回 HTTP 403。",
+      "local_state_ref": "sha256-state:ac19b4e287445ea77f2c2049ef2e8335ff2ae1d7bf0fa8ea11fb1efb60684186",
       "item_id": "industry-research",
       "kind": "skill",
       "source_url": "https://github.com/rkreddyp/investrecipes"
@@ -707,13 +720,14 @@
     },
     "skill:web-research": {
       "id": "skill:web-research",
-      "checked_at": "2026-08-25T10:43:19+08:00",
+      "checked_at": "2026-08-25T20:04:08+08:00",
       "installed_version": "unknown",
       "remote_version": "unknown",
       "remote_ref": "",
       "evidence_url": "https://github.com/smithery/ai",
       "status": "check_failed",
       "detail": "GitHub 返回 HTTP 403。",
+      "local_state_ref": "sha256-state:5f8c5fe039e1acc5f4467df2f11caf354bb93c4a78d6eecbaa5e868753d61322",
       "item_id": "web-research",
       "kind": "skill",
       "source_url": "https://github.com/smithery/ai"

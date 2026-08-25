@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "updated_at": "2026-08-25T14:11:50+08:00",
+  "updated_at": "2026-08-25T15:35:12+08:00",
   "skills": {
     "imagegen": {
       "id": "imagegen",
@@ -52,8 +52,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:706d4d96e1d5c9e6023fe3ccabba1bb34b364024d344fd25b8515ec7d28fe3c4",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:681ddb4ad6d06a2acc78a3535b583f8d0c1ea800ecda3d56370d3310fd2cd4ba",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "system_skill"
         }
@@ -118,8 +118,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:4371fcc6652d78309ccf5e7710a4fd22314ad7f1f4928a6c172ddae80c87cc87",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:7cb8fa1b2a0c635b5c61ffe1da7b8594a7ea0fce5b71e8d523e2025d88b2a05e",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "system_skill"
         }
@@ -176,8 +176,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:9dba03c079abfbc680e8fca146069f054c1b0c5e9bcb5e5a9effcf86a95f67c6",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:71b95b8219644f95d633721e7f7cd3c469edfc8fe50f8415d400dfb2d74bc7b9",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "system_skill"
         }
@@ -252,15 +252,15 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:cccd291077ec57c6f50ca6529f0f3fb93212da09473effb2fcec808e81b21288",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:6656e54755638e8efcf275a472b9672eaa8a9a1b9e59dc210e275b03b59e1e66",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "system_skill"
         },
         "gemini": {
           "version": "unknown",
-          "ref": "sha256:e030e7685e26283b4a76f5202aa3ae8516fb41dde799be5ae8ea6393ec009fe9",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         },
@@ -323,8 +323,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:2892d8b2fb11631132118f340aed80ae17e59d5a571fc2c4f4a4a7e73f139d52",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:d68b77e5bbb34dedab89d134da52855f140fc4b4299b80104f534e3b9e98f8ee",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "system_skill"
         }
@@ -391,7 +391,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:243eeaa5e9a42bb12d94d6af29a51b2c956546a16b1862282db1e5bd27315f8a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -463,8 +463,8 @@
         },
         "agents": {
           "version": "unknown",
-          "ref": "sha256:c395c6a19b7df61510da018e9bf4cf4ffb6d65c402345cb47d2ef93a08cf68ac",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:e105b7d3df391459adf593e586676408c97eeda0c2e7eb1982ca3a30d19d89bf",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -525,7 +525,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:5bc99df7e5f8af5471eaa5d20b85fc46e99895cf3f2642fa9da94108d03ca13e",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -606,7 +606,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:c00eeea0e13e74fe4a9d84ba0a8542205a1b736d65f13134fe1a6647eb14976f",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -679,8 +679,8 @@
         },
         "agents": {
           "version": "unknown",
-          "ref": "sha256:35c43b9d10c2388dbb228047ad028c989a14033750812125f351c85aa42c7a4a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:1608ea77fbb6fc30d13a97d12cfa8ebf31358d40f0dd97beed24829d6b3f45dd",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -740,8 +740,8 @@
         },
         "agents": {
           "version": "unknown",
-          "ref": "sha256:dccff7952cc7824556c97e4ca4f5fdaf6bd7112263f5b33d4c37f28a78ec3e21",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:0d8c0c190b091c65fcb2375d4836698ce784bc07c1cab22a56af000d29df2153",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -855,8 +855,8 @@
         },
         "agents": {
           "version": "unknown",
-          "ref": "sha256:c3f27d6cf18173ba544d3fc4cd3e4a6bd914569cb25f3ba9cc65aaef2c0f8395",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:4aac0fe63fd95ca980657ff7ef65ee58f5f0fbac7163aeea3242316b19cad2d6",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -1011,8 +1011,8 @@
       "installed_on": {
         "gemini": {
           "version": "unknown",
-          "ref": "sha256:60af77f6eeff0ea283a9a252aa5194bf356b8ce86acb862bd6c71bb8262e8b1f",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:0e5a15016ff0ccd5d6b9b3f3b95c712855c3ddb5b05f1929dc8989a6db210d18",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         },
@@ -1070,8 +1070,8 @@
       "installed_on": {
         "gemini": {
           "version": "unknown",
-          "ref": "sha256:bd62ff780856ac8bcedf0e3447eb78b2378f788ebcb74385a2c7e5bc16df003a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:f17da04a21cfdb89261b046dd2e208ded02646f70890ec7ea484797ecae4f5a2",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         },
@@ -1135,8 +1135,8 @@
       "installed_on": {
         "gemini": {
           "version": "unknown",
-          "ref": "sha256:a8e56e3d583fefbd423d16c2d8d0bd7e686626603cceed9a581a69f4387816ea",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:43040d2ed78447e05dc84dc9be50abe80dc3e2c8059316808bb7a9d0be9deaff",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         },
@@ -1194,8 +1194,8 @@
       "installed_on": {
         "gemini": {
           "version": "unknown",
-          "ref": "sha256:39980a3487d2875d77df13f9b3ba3d0b944e18f2e7e79a7b7786c1406889801a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:80c43f6e438518fa79360c19a6b42fb4e1f4dc44a2db74cf72a3833984c3fce2",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         },
@@ -1268,8 +1268,8 @@
         },
         "claude-code": {
           "version": "unknown",
-          "ref": "sha256:f421155ce38a533473d018ef76835b0ce5cc1e2678e246fa482127564eb11e62",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:77e607fc84620001b881bb3079cc074955432d4c9ffadc8d11a69499a916b39a",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         },
@@ -3186,8 +3186,8 @@
         },
         "codex": {
           "version": "unknown",
-          "ref": "sha256:f50e559749bfd8d24e946b34e63e5a3956923b205a373114872e9010a478248a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:6740e7c31e82266d227e2683cc784486f0c88b27669c27e34c0e01bc80d41e83",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -3288,8 +3288,8 @@
       "installed_on": {
         "codex": {
           "version": "unknown",
-          "ref": "sha256:ed9fa40ef9bd4e0d5bad3b88146aa1e650c5242630efc95c52b264ba961b8438",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:ff3f4401234a9f74aed9e3c999fe2db440fde59942587d069d0a86039c09f235",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -3375,8 +3375,8 @@
       "installed_on": {
         "codex": {
           "version": "unknown",
-          "ref": "sha256:2dd628afc3f9217d88bba8f61454b964aa25921f55f69e8d4d923b2ab092c54f",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:0a635585817d1ac96e8e512114d08258b70f9e54ce0052078a258291ac13a8ed",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -3422,7 +3422,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:384075b3cfd2d962b930a1ce828e43551e1ac8a657112ed287d2cb50f14ecf5b",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -3469,7 +3469,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:d108cf2b36355ab37eb5962933f4d09785ec002f3105c506129320209306b9d2",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -3515,7 +3515,7 @@
         "codex": {
           "version": "unknown",
           "ref": "sha256:0ffaabcc8e0990627c4725f18bf1c7955534a796c1c199e872909de2013ce6a8",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -3560,8 +3560,8 @@
       "installed_on": {
         "codex": {
           "version": "unknown",
-          "ref": "sha256:bb46315f6bc4b7051c05f807d19b1689b20418ac6c42590406d805c10fa2fd1a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:07079efd0dc76f05fade424e5dfb048dce1de2df7626e1a4f56292a4f3f92228",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "system_skill"
         }
@@ -3607,8 +3607,8 @@
       "installed_on": {
         "codex": {
           "version": "unknown",
-          "ref": "sha256:56ffa5a1c23c4bc7e38adfc2b3b488128cef55da5af12c778c3ec6d2e57ec4f1",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "sha256:4e83510be2203188e02e6c8eca9e53d714a1e689e8aeef2eb37be42bbeab7eee",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -3654,7 +3654,7 @@
         "agents": {
           "version": "unknown",
           "ref": "sha256:12236310397bffb032cbd422b36fab0d217524701154aa4ceab45b848f06e6e7",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "local_skill"
         }
@@ -3695,7 +3695,7 @@
       },
       "latest_version": "26.818.61809",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:browser@openai-bundled@26.818.61809:sha256:364239909b98c5b54bec75cad3aedca422aa5817141de43da256e51ea780242a",
+      "latest_ref": "plugin:browser@openai-bundled@26.818.61809:sha256:3511c6354c3b847ddb7416d63f426194b51f956f2d8c433a8a0cd207f7da9e73",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -3703,8 +3703,8 @@
       "installed_on": {
         "codex": {
           "version": "26.818.61809",
-          "ref": "plugin:browser@openai-bundled@26.818.61809:sha256:364239909b98c5b54bec75cad3aedca422aa5817141de43da256e51ea780242a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:browser@openai-bundled@26.818.61809:sha256:3511c6354c3b847ddb7416d63f426194b51f956f2d8c433a8a0cd207f7da9e73",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "browser@openai-bundled",
@@ -3747,7 +3747,7 @@
       },
       "latest_version": "26.818.61809",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:chrome@openai-bundled@26.818.61809:sha256:587f76d0fd965f1b5d000d4d0669d4e027b9cb64b4ee92510610528c1554a12a",
+      "latest_ref": "plugin:chrome@openai-bundled@26.818.61809:sha256:307e9b186efb3ce17b9ee1571b97b6247cd7d864607fdd3e5e263cbdbddebb81",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -3755,8 +3755,8 @@
       "installed_on": {
         "codex": {
           "version": "26.818.61809",
-          "ref": "plugin:chrome@openai-bundled@26.818.61809:sha256:587f76d0fd965f1b5d000d4d0669d4e027b9cb64b4ee92510610528c1554a12a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:chrome@openai-bundled@26.818.61809:sha256:307e9b186efb3ce17b9ee1571b97b6247cd7d864607fdd3e5e263cbdbddebb81",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "chrome@openai-bundled",
@@ -3801,7 +3801,7 @@
       },
       "latest_version": "26.727.11326",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:documents@openai-primary-runtime@26.727.11326:sha256:84dd796a7834889191515ea6508abc9d6559314dd554e0345eeaa07c5e780bd5",
+      "latest_ref": "plugin:documents@openai-primary-runtime@26.727.11326:sha256:83969bb5d2b4f8571565e9981240c61708dfcf5d6f489243b7e29f5a04b07f16",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -3809,8 +3809,8 @@
       "installed_on": {
         "codex": {
           "version": "26.727.11326",
-          "ref": "plugin:documents@openai-primary-runtime@26.727.11326:sha256:84dd796a7834889191515ea6508abc9d6559314dd554e0345eeaa07c5e780bd5",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:documents@openai-primary-runtime@26.727.11326:sha256:83969bb5d2b4f8571565e9981240c61708dfcf5d6f489243b7e29f5a04b07f16",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "documents@openai-primary-runtime",
@@ -3862,7 +3862,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:cf5360fd8b197673bb237c52c603c97fa319c875c3dfa2cd8efff52d4422f513",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -3914,7 +3914,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:27721fc1d67d1b41949caa75ac8f94f81952ff124406878af6524047929e60d2",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -3967,7 +3967,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:563722f53854e606f8a9f87e37e72d7ef70a22d46d5836b8e4d6abfb1b79e9e0",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4020,7 +4020,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:0b05effc47df0a14f8e0c3e3597e6722224747435546385d38a2cae279bd20b9",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4072,7 +4072,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:c0b6b7a62a15597aaf2b1ec679e21da48f533b756127f0aef957cdfe9f3da738",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4125,7 +4125,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:68abd08cfe5e073e3c446a3f675f44c5bf98f57434dba679e8acd8a763379a8b",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4178,7 +4178,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:51fb9d21baf6119c4ccb1903638a6bac0e859210de63460fffa7025d52e997e0",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4231,7 +4231,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:d58d019b89cb6f292ac3ab991d561489eef477ff53ce05fb024a0c936f5af26a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4283,7 +4283,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:880ef094d4d0c89a7bde5ce9bbe4086625c186651e9e6efc8ba8bdd7cc77f9d5",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4335,7 +4335,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:33bb660791a0b9a21628a42c34934932220203b6aabd84e98cb1b45327d0384c",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4387,7 +4387,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:6d63c5cd025ffe936e7bab5db3023672bbaec26af55c2bb8b057d38c202c9c32",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4439,7 +4439,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:aa893ebd89e7c8d1db4261d01cc2b1add35d78d00785871ccaaa5fc8db783ec9",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4492,7 +4492,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:d97d5be20189b7f53dd269b6e1c5f694eaf53e5a72f6559fcb1578911b7cda82",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4544,7 +4544,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:15cfeeedf440021f16ed3f3ad8c7c1ef6d48898b9447741e223d2fb41cfc9800",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4596,7 +4596,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:b7c8d0c05f75878b9bc21e56a57c41ec1aa29700aca0a24822be0f9f1bd53207",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4648,7 +4648,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:7c68430c6cf57b55b457d4735dbd1a46b889bef135a32222902dd0848b6e1752",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4700,7 +4700,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:51d7882ac94e8e57b323394825728c33925af878806e37277217c2dc12a912e5",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4753,7 +4753,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:87f7b7ed1b0d8410f5e5971cd7f7db9a4165e2f37069e97e52dbfb469b75a57c",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4805,7 +4805,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:26d7cafdcd1899a937b325c5d02ac57c162d45002153be33a934d35f81eb6110",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4857,7 +4857,7 @@
         "codex": {
           "version": "0.1.1",
           "ref": "plugin:openai-templates@openai-curated-remote@0.1.1:sha256:74f4a5cccec0107b861548b157e04c51d9b58ec13a990c86394b4c529b8ecf41",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "openai-templates@openai-curated-remote",
@@ -4901,7 +4901,7 @@
       },
       "latest_version": "26.727.11326",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:pdf@openai-primary-runtime@26.727.11326:sha256:8a9eb6f1fb2e7f5a4fc5f157f1d3e1319890e988abab294dc316644cf997f1b6",
+      "latest_ref": "plugin:pdf@openai-primary-runtime@26.727.11326:sha256:f22e8cf2b8164a5fb99a65109a9aa84c7fed5c56f44db2b6fb59e9766ce5c65a",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -4909,8 +4909,8 @@
       "installed_on": {
         "codex": {
           "version": "26.727.11326",
-          "ref": "plugin:pdf@openai-primary-runtime@26.727.11326:sha256:8a9eb6f1fb2e7f5a4fc5f157f1d3e1319890e988abab294dc316644cf997f1b6",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:pdf@openai-primary-runtime@26.727.11326:sha256:f22e8cf2b8164a5fb99a65109a9aa84c7fed5c56f44db2b6fb59e9766ce5c65a",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "pdf@openai-primary-runtime",
@@ -4962,7 +4962,7 @@
         "codex": {
           "version": "0.1.0",
           "ref": "plugin:plugin-management@openai-curated-remote@0.1.0:sha256:653841cc21205269f08b0ce135891e1518dac616a766bcfb0b57d788d3f68b10",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "plugin-management@openai-curated-remote",
@@ -5005,7 +5005,7 @@
       },
       "latest_version": "26.727.11326",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:presentations@openai-primary-runtime@26.727.11326:sha256:242cf728bbbe26727cd0c721aa0358aa8b8e063b8c3e387933cbb8bcd4c4b7bd",
+      "latest_ref": "plugin:presentations@openai-primary-runtime@26.727.11326:sha256:03793087176e412e99d09292e9b23d74f956d64f8f3d19765ff9e51fc84c3405",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -5013,8 +5013,8 @@
       "installed_on": {
         "codex": {
           "version": "26.727.11326",
-          "ref": "plugin:presentations@openai-primary-runtime@26.727.11326:sha256:242cf728bbbe26727cd0c721aa0358aa8b8e063b8c3e387933cbb8bcd4c4b7bd",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:presentations@openai-primary-runtime@26.727.11326:sha256:03793087176e412e99d09292e9b23d74f956d64f8f3d19765ff9e51fc84c3405",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "presentations@openai-primary-runtime",
@@ -5057,7 +5057,7 @@
       },
       "latest_version": "0.1.43",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:sites@openai-bundled@0.1.43:sha256:ea51341546f1f255a9fbf55dd23120ffa25f53ddba0ceb234bc2f401df01901d",
+      "latest_ref": "plugin:sites@openai-bundled@0.1.43:sha256:373eedd28c9b394e502bca1f2af2c2604f70147d5de1ee26865a675e0579f8c4",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -5065,8 +5065,8 @@
       "installed_on": {
         "codex": {
           "version": "0.1.43",
-          "ref": "plugin:sites@openai-bundled@0.1.43:sha256:ea51341546f1f255a9fbf55dd23120ffa25f53ddba0ceb234bc2f401df01901d",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:sites@openai-bundled@0.1.43:sha256:373eedd28c9b394e502bca1f2af2c2604f70147d5de1ee26865a675e0579f8c4",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "sites@openai-bundled",
@@ -5109,7 +5109,7 @@
       },
       "latest_version": "0.1.43",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:sites@openai-bundled@0.1.43:sha256:4b200c3d663ec13a74ce289929d9dfa1aed1cfcee7dd4616759b1ce322de18e1",
+      "latest_ref": "plugin:sites@openai-bundled@0.1.43:sha256:68e6dbf67408a80defc618263e8633c9dc237eae21dd7dfbf32879dcb18904ad",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -5117,8 +5117,8 @@
       "installed_on": {
         "codex": {
           "version": "0.1.43",
-          "ref": "plugin:sites@openai-bundled@0.1.43:sha256:4b200c3d663ec13a74ce289929d9dfa1aed1cfcee7dd4616759b1ce322de18e1",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:sites@openai-bundled@0.1.43:sha256:68e6dbf67408a80defc618263e8633c9dc237eae21dd7dfbf32879dcb18904ad",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "sites@openai-bundled",
@@ -5161,7 +5161,7 @@
       },
       "latest_version": "26.727.11326",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:spreadsheets@openai-primary-runtime@26.727.11326:sha256:0f39bcdd71196888dcf5e68b16968a353bb5dd69e761caa4c1ebbc31ab8981a8",
+      "latest_ref": "plugin:spreadsheets@openai-primary-runtime@26.727.11326:sha256:994e33cf1d3352d3fb4ab9e3f24076b63ecd0a92dae450f2b4a27cd9a7f00e88",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -5169,8 +5169,8 @@
       "installed_on": {
         "codex": {
           "version": "26.727.11326",
-          "ref": "plugin:spreadsheets@openai-primary-runtime@26.727.11326:sha256:0f39bcdd71196888dcf5e68b16968a353bb5dd69e761caa4c1ebbc31ab8981a8",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:spreadsheets@openai-primary-runtime@26.727.11326:sha256:994e33cf1d3352d3fb4ab9e3f24076b63ecd0a92dae450f2b4a27cd9a7f00e88",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "spreadsheets@openai-primary-runtime",
@@ -5213,7 +5213,7 @@
       },
       "latest_version": "26.727.11326",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:spreadsheets@openai-primary-runtime@26.727.11326:sha256:0e56117131d8d70bd2b5269d8c3dca6c13bad926014dcbd59f7ef878f6f3264a",
+      "latest_ref": "plugin:spreadsheets@openai-primary-runtime@26.727.11326:sha256:5b08bb7f858140ca7f2e94f248e0b0ca26b9c4330914dee1cd32d4ec210136de",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -5221,8 +5221,8 @@
       "installed_on": {
         "codex": {
           "version": "26.727.11326",
-          "ref": "plugin:spreadsheets@openai-primary-runtime@26.727.11326:sha256:0e56117131d8d70bd2b5269d8c3dca6c13bad926014dcbd59f7ef878f6f3264a",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:spreadsheets@openai-primary-runtime@26.727.11326:sha256:5b08bb7f858140ca7f2e94f248e0b0ca26b9c4330914dee1cd32d4ec210136de",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "spreadsheets@openai-primary-runtime",
@@ -5268,7 +5268,7 @@
       },
       "latest_version": "26.727.11326",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:template-creator@openai-primary-runtime@26.727.11326:sha256:894e7bd9ae5f5de28aa140ef684e4b9514e9eadfb1ec0cceed6a5d0c494d7581",
+      "latest_ref": "plugin:template-creator@openai-primary-runtime@26.727.11326:sha256:e1f3a2caa0e95e68dc178b18e61e4a8683dc4d96c4d13972adea4b27dd72360b",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -5276,8 +5276,8 @@
       "installed_on": {
         "codex": {
           "version": "26.727.11326",
-          "ref": "plugin:template-creator@openai-primary-runtime@26.727.11326:sha256:894e7bd9ae5f5de28aa140ef684e4b9514e9eadfb1ec0cceed6a5d0c494d7581",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:template-creator@openai-primary-runtime@26.727.11326:sha256:e1f3a2caa0e95e68dc178b18e61e4a8683dc4d96c4d13972adea4b27dd72360b",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "template-creator@openai-primary-runtime",
@@ -5320,7 +5320,7 @@
       },
       "latest_version": "1.0.22",
       "version_strategy": "plugin_manifest",
-      "latest_ref": "plugin:visualize@openai-bundled@1.0.22:sha256:aecd98681e600bcf502d7e8b0dac31ba2072e5b65eaa64404f86dfaf796d4887",
+      "latest_ref": "plugin:visualize@openai-bundled@1.0.22:sha256:e64cdd5dca2d5ef66b0972ce4fbe941e14acd75f3c2550c150dacc5936c7470c",
       "status": "active",
       "supported_platforms": [
         "codex"
@@ -5328,8 +5328,8 @@
       "installed_on": {
         "codex": {
           "version": "1.0.22",
-          "ref": "plugin:visualize@openai-bundled@1.0.22:sha256:aecd98681e600bcf502d7e8b0dac31ba2072e5b65eaa64404f86dfaf796d4887",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "ref": "plugin:visualize@openai-bundled@1.0.22:sha256:e64cdd5dca2d5ef66b0972ce4fbe941e14acd75f3c2550c150dacc5936c7470c",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "visualize@openai-bundled",
@@ -5383,7 +5383,7 @@
         "codex": {
           "version": "0.1.14",
           "ref": "plugin:deep-research-work@openai-curated-remote@0.1.14:sha256:c7b924a736d715bf90941c5e75460b3387ec90b1fdb3a7c79d3e9bfb10427dc6",
-          "last_seen": "2026-08-25T14:11:50+08:00",
+          "last_seen": "2026-08-25T15:35:12+08:00",
           "status": "installed",
           "distribution": "plugin",
           "plugin_id": "deep-research-work@openai-curated-remote",
